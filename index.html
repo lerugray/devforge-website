@@ -134,11 +134,28 @@
 
             <!-- Screenshot -->
             <section class="screenshot-section" aria-labelledby="screenshot-heading">
-                <h2 id="screenshot-heading" class="sr-only">App Preview</h2>
-                <figure class="screenshot-placeholder" role="img" aria-label="DevForge application screenshot — coming soon">
-                    <span class="placeholder-text">[ screenshot — coming soon ]</span>
-                </figure>
+                <h2 id="screenshot-heading">Two themes.</h2>
+                <div class="screenshot-grid">
+                    <figure class="screenshot-figure">
+                        <button class="screenshot-btn" type="button" aria-label="View SNES Light theme full size">
+                            <img src="assets/images/DF2.png" alt="DevForge in SNES Light theme" class="screenshot-img">
+                        </button>
+                        <figcaption class="screenshot-label">SNES Light</figcaption>
+                    </figure>
+                    <figure class="screenshot-figure">
+                        <button class="screenshot-btn" type="button" aria-label="View CRT Dark theme full size">
+                            <img src="assets/images/DF1.png" alt="DevForge in CRT Dark theme" class="screenshot-img">
+                        </button>
+                        <figcaption class="screenshot-label">CRT Dark</figcaption>
+                    </figure>
+                </div>
             </section>
+
+            <!-- Screenshot Lightbox -->
+            <div class="lightbox-overlay" id="screenshot-lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
+                <button class="lightbox-close" aria-label="Close">&times;</button>
+                <img class="lightbox-img" id="lightbox-img" src="" alt="">
+            </div>
 
             <!-- Modes -->
             <section class="modes-section" aria-labelledby="modes-heading">
@@ -420,6 +437,42 @@
 
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && !modal.hidden) closeModal();
+        });
+    })();
+
+    // Screenshot lightbox
+    (function () {
+        var lightbox = document.getElementById("screenshot-lightbox");
+        var lightboxImg = document.getElementById("lightbox-img");
+        var closeBtn = lightbox.querySelector(".lightbox-close");
+        var trigger = null;
+
+        document.querySelectorAll(".screenshot-btn").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var img = this.querySelector("img");
+                trigger = this;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.hidden = false;
+                closeBtn.focus();
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.hidden = true;
+            lightboxImg.src = "";
+            if (trigger) trigger.focus();
+            trigger = null;
+        }
+
+        closeBtn.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
         });
     })();
     </script>
