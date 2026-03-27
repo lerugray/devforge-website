@@ -84,18 +84,18 @@
             <section class="modes-section" aria-labelledby="modes-heading">
                 <h2 id="modes-heading">12 modes. One job each.</h2>
                 <ul class="modes-grid">
-                    <li class="mode-cell" style="color: var(--text-primary);">Forge</li>
-                    <li class="mode-cell" style="color: var(--green);">GDD</li>
-                    <li class="mode-cell" style="color: var(--red);">Pitch</li>
-                    <li class="mode-cell" style="color: var(--amber);">Discuss</li>
-                    <li class="mode-cell" style="color: var(--blue);">Implement</li>
-                    <li class="mode-cell" style="color: var(--orange);">Debug</li>
-                    <li class="mode-cell" style="color: var(--cyan);">Research</li>
-                    <li class="mode-cell" style="color: var(--purple);">QA</li>
-                    <li class="mode-cell" style="color: var(--text-dim);">Freeform</li>
-                    <li class="mode-cell" style="color: var(--gold);">Marketing</li>
-                    <li class="mode-cell" style="color: var(--teal);">Instruct</li>
-                    <li class="mode-cell" style="color: var(--lime);">Test</li>
+                    <li><button class="mode-cell" style="color: var(--text-primary);" data-mode="forge">Forge</button></li>
+                    <li><button class="mode-cell" style="color: var(--green);" data-mode="gdd">GDD</button></li>
+                    <li><button class="mode-cell" style="color: var(--red);" data-mode="pitch">Pitch</button></li>
+                    <li><button class="mode-cell" style="color: var(--amber);" data-mode="discuss">Discuss</button></li>
+                    <li><button class="mode-cell" style="color: var(--blue);" data-mode="implement">Implement</button></li>
+                    <li><button class="mode-cell" style="color: var(--orange);" data-mode="debug">Debug</button></li>
+                    <li><button class="mode-cell" style="color: var(--cyan);" data-mode="research">Research</button></li>
+                    <li><button class="mode-cell" style="color: var(--purple);" data-mode="qa">QA</button></li>
+                    <li><button class="mode-cell" style="color: var(--text-dim);" data-mode="freeform">Freeform</button></li>
+                    <li><button class="mode-cell" style="color: var(--gold);" data-mode="marketing">Marketing</button></li>
+                    <li><button class="mode-cell" style="color: var(--teal);" data-mode="instruct">Instruct</button></li>
+                    <li><button class="mode-cell" style="color: var(--lime);" data-mode="test">Test</button></li>
                 </ul>
                 <p class="modes-analog">Plus Analog Mode for board games and wargames.</p>
             </section>
@@ -132,5 +132,110 @@
             <p class="footer-text">DEVFORGE &mdash; 2026</p>
         </footer>
     </div>
+
+    <!-- Mode Detail Modal -->
+    <div class="modal-overlay" id="mode-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-mode-name"></h3>
+                <button class="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <p id="modal-description" class="modal-body"></p>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        var modes = {
+            forge: {
+                name: "FORGE",
+                desc: "You describe your game. Forge asks targeted questions, then builds your GDD, task list, and project rules."
+            },
+            gdd: {
+                name: "GDD",
+                desc: "Updates your GDD. Adds mechanics, checks consistency, tracks changes. Refuses to write code."
+            },
+            pitch: {
+                name: "PITCH",
+                desc: "Stress-tests your design. Finds scope creep, mechanical contradictions, and feature bloat. Tells you what to cut. Not polite about it."
+            },
+            discuss: {
+                name: "DISCUSS",
+                desc: "Open-ended design talk. Mechanics, lore, balance theory, weird ideas. Claude stays in design space and won't jump to implementation."
+            },
+            implement: {
+                name: "IMPLEMENT",
+                desc: "Writes code with your GDD loaded and your current phase in view. Knows your stack, follows your project conventions, auto-checkpoints on request."
+            },
+            debug: {
+                name: "DEBUG",
+                desc: "Root cause analysis with minimal collateral changes. Paste screenshots into the prompt. Claude diagnoses before patching."
+            },
+            research: {
+                name: "RESEARCH",
+                desc: "Search, download, and summarize reference material. Findings stick around between sessions so you don't look up the same thing twice."
+            },
+            qa: {
+                name: "QA",
+                desc: "Systematic testing audit. Claude walks through your game looking for bugs, then files each one as Blocking, Annoying, or Cosmetic. Reports only. Doesn't fix."
+            },
+            freeform: {
+                name: "FREEFORM",
+                desc: "No guardrails. Think out loud about anything project-related. Claude follows your lead without enforcing mode discipline."
+            },
+            marketing: {
+                name: "MARKETING",
+                desc: "Store listings, devlogs, social posts. Built-in anti-AI-voice filter runs every output through 10 rules so it sounds like you wrote it, not a chatbot."
+            },
+            instruct: {
+                name: "INSTRUCT",
+                desc: "Step-by-step walkthroughs with exact button names, menu paths, and screenshots. You learn the tool, not just get code dropped on you."
+            },
+            test: {
+                name: "TEST",
+                desc: "Playtest logging. Tag each observation as bug, balance issue, question, or working-as-intended. Route tagged items to Debug, Discuss, or QA with one click."
+            }
+        };
+
+        var modal = document.getElementById("mode-modal");
+        var titleEl = document.getElementById("modal-title");
+        var descEl = document.getElementById("modal-description");
+        var closeBtn = modal.querySelector(".modal-close");
+        var trigger = null;
+
+        function openModal(key, btn) {
+            var m = modes[key];
+            if (!m) return;
+            trigger = btn;
+            titleEl.textContent = m.name;
+            titleEl.style.color = getComputedStyle(btn).color;
+            descEl.textContent = m.desc;
+            modal.hidden = false;
+            closeBtn.focus();
+        }
+
+        function closeModal() {
+            modal.hidden = true;
+            if (trigger) trigger.focus();
+            trigger = null;
+        }
+
+        document.querySelectorAll(".mode-cell[data-mode]").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                openModal(this.dataset.mode, this);
+            });
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !modal.hidden) closeModal();
+        });
+    })();
+    </script>
 </body>
 </html>

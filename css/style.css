@@ -327,6 +327,10 @@ p:last-child {
   margin-top: 0;
 }
 
+.modes-grid li {
+  display: contents;
+}
+
 .mode-cell {
   font-family: var(--font-pixel);
   font-size: 8px;
@@ -336,6 +340,14 @@ p:last-child {
   background: var(--bg-inset);
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  width: 100%;
+}
+
+.mode-cell:hover {
+  background: var(--bg-surface);
+  border-color: currentColor;
 }
 
 .modes-analog {
@@ -467,6 +479,66 @@ p:last-child {
   font-size: 8px;
   color: var(--text-dim);
   letter-spacing: 1px;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 43, 61, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: var(--space-16);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-card {
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  max-width: 480px;
+  width: 100%;
+  padding: var(--space-24);
+}
+
+.modal-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+.modal-mode-name {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.modal-close {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 var(--space-4);
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+}
+
+.modal-body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.65;
+  margin: 0;
 }
 
 /* --- Glow accents on terminal blocks (muted for SNES) --- */
