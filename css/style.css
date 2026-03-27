@@ -602,6 +602,62 @@ p:last-child {
   margin-bottom: var(--space-4);
 }
 
+/* --- Dungeon Banner --- */
+.dungeon-banner {
+  margin: 0 calc(-1 * var(--space-16));
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-32);
+}
+
+.dungeon-scene {
+  display: grid;
+  grid-template-columns: repeat(15, 48px);
+  grid-template-rows: repeat(3, 48px);
+}
+
+.dungeon-scene .tile {
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+.tile.t-wall  { background-image: url('../assets/images/sprites/world/wall_block_stone.png'); }
+.tile.t-brick { background-image: url('../assets/images/sprites/world/wall_x_brick_grey.png'); }
+.tile.t-door  { background-image: url('../assets/images/sprites/world/door_wood_closed.png'); }
+.tile.t-floor { background-image: url('../assets/images/sprites/world/floor_grey.png'); }
+.tile.t-floord { background-image: url('../assets/images/sprites/world/floor_grey_dot.png'); }
+
+.tile .sprite-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+
+/* --- Character Parade --- */
+.character-parade {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-16) 0 0;
+}
+
+.character-parade img {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+
 /* --- Glow accents on terminal blocks (muted for SNES) --- */
 .terminal-block.glow-green { border-left: 2px solid var(--green); }
 .terminal-block.glow-amber { border-left: 2px solid var(--amber); }
@@ -681,5 +737,31 @@ p:last-child {
 
   .detail-list {
     grid-template-columns: 1fr;
+  }
+
+  .dungeon-banner {
+    margin-left: calc(-1 * var(--space-12));
+    margin-right: calc(-1 * var(--space-12));
+  }
+
+  .dungeon-scene {
+    grid-template-columns: repeat(15, 36px);
+    grid-template-rows: repeat(3, 36px);
+  }
+
+  .dungeon-scene .tile {
+    width: 36px;
+    height: 36px;
+    background-size: 36px 36px;
+  }
+
+  .tile .sprite-overlay {
+    width: 36px;
+    height: 36px;
+  }
+
+  .character-parade img {
+    width: 36px;
+    height: 36px;
   }
 }
