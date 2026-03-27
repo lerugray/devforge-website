@@ -85,6 +85,42 @@ GitHub Pages serves from the root of the `main` branch. No build step needed —
 
 ---
 
+## REQUIRED: Use Design Skills (Not Raw Code)
+
+**Do NOT vibecode this site.** The #1 priority is that this looks like a real product page, not an AI-generated template. To achieve this, you MUST use the following Claude Code skills when building and reviewing the frontend:
+
+### Skills to invoke:
+
+| Skill | What it does | When to use |
+|---|---|---|
+| `frontend-design` | Production-grade frontend with high design quality | When writing any HTML/CSS for the page |
+| `frontend-design-pro` | Jaw-dropping interfaces + real photo URLs from Unsplash/Pexels | When building hero section, picking images |
+| `ui-ux-pro-max` | 50+ styles, 161 palettes, 57 font pairings, UX guidelines | When making any design decision (layout, spacing, color) |
+| `accesslint:contrast-checker` | WCAG contrast analysis | After setting colors — verify all pass AA |
+| `accesslint:refactor` | Auto-fix accessibility issues | After initial build, before final commit |
+
+### How to use them:
+
+1. **Before writing any HTML/CSS**, invoke `ui-ux-pro-max` to plan the design approach using the CRT Dark palette and retro terminal style from `visual_design_brief.md`
+2. **When building the page**, invoke `frontend-design` or `frontend-design-pro` — do NOT just write raw HTML/CSS from scratch
+3. **After building**, invoke `accesslint:contrast-checker` to verify all color pairs pass WCAG AA
+4. **Final pass**, invoke `accesslint:refactor` to catch any remaining accessibility issues
+
+### If skills are not installed:
+
+These are Claude Code plugin skills. If they're not available when you start a session, tell the user they need to install them. The install commands are:
+
+```bash
+claude mcp add-skill frontend-design
+claude mcp add-skill frontend-design-pro
+claude mcp add-skill ui-ux-pro-max
+claude mcp add-skill accesslint
+```
+
+If those exact commands don't work, search for the correct install method — these are community skills/plugins for Claude Code. The user has them installed on their home PC but may need to reinstall on their work ThinkPad.
+
+---
+
 ## Key Principles
 
 - Match the app's visual identity exactly — this is a premium tool, not a generic landing page
@@ -92,3 +128,4 @@ GitHub Pages serves from the root of the `main` branch. No build step needed —
 - Mobile-responsive (single column on small screens)
 - Fast — no heavy assets, no JS frameworks, minimal dependencies
 - Dense, information-forward design (power-user audience, not consumer)
+- **No AI slop** — no generic hero gradients, no "Welcome to DevForge", no stock startup-page patterns. This should feel like a retro terminal, not a SaaS landing page
