@@ -98,13 +98,15 @@ GitHub Pages serves from the root of the `main` branch. No build step needed —
 | `ui-ux-pro-max` | 50+ styles, 161 palettes, 57 font pairings, UX guidelines | When making any design decision (layout, spacing, color) |
 | `accesslint:contrast-checker` | WCAG contrast analysis | After setting colors — verify all pass AA |
 | `accesslint:refactor` | Auto-fix accessibility issues | After initial build, before final commit |
+| `stop-slop` | Remove AI writing patterns from prose | After writing ANY user-facing text (headlines, bullets, descriptions) |
 
 ### How to use them:
 
 1. **Before writing any HTML/CSS**, invoke `ui-ux-pro-max` to plan the design approach using the CRT Dark palette and retro terminal style from `visual_design_brief.md`
 2. **When building the page**, invoke `frontend-design` or `frontend-design-pro` — do NOT just write raw HTML/CSS from scratch
-3. **After building**, invoke `accesslint:contrast-checker` to verify all color pairs pass WCAG AA
-4. **Final pass**, invoke `accesslint:refactor` to catch any remaining accessibility issues
+3. **After writing any copy** (headline, feature bullets, descriptions), invoke `stop-slop` to strip AI writing patterns. Landing page copy must sound like a human wrote it — no "unleash", "seamlessly", "elevate", "empower", or any of the usual AI tells
+4. **After building**, invoke `accesslint:contrast-checker` to verify all color pairs pass WCAG AA
+5. **Final pass**, invoke `accesslint:refactor` to catch any remaining accessibility issues
 
 ### If skills are not installed:
 
