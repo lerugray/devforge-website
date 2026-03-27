@@ -8,9 +8,30 @@ The actual DevForge app lives at `~/OneDrive/Documents/Devforge/`. Planning docs
 
 ---
 
+## Current State (Updated 2026-03-27)
+
+The landing page is built and live. SNES Light theme, Space Mono body font, Press Start 2P pixel headings. All content written, all colors WCAG AA verified, all copy run through stop-slop.
+
+**What's done:**
+- Full page with all sections (hero, positioning, features, screenshot placeholder, modes grid with modals, analog mode, session workflow, parallel terminals, tools, skills, stacks, providers, platform support, details grid, buy CTA, mailing list)
+- SNES Light theme (cream base, muted accent colors)
+- Space Mono (body) + Press Start 2P (headings) fonts bundled
+- Interactive mode grid (click any mode for a description modal)
+- $9 early access pricing, Windows-first with Mac/Linux tester callout
+- Honest provider section (Claude Code tested, others configured but untested)
+- WCAG AA contrast verified on all color pairs
+- Accessibility: skip link, focus-visible, reduced-motion, semantic HTML, heading hierarchy
+
+**Placeholders still needed:**
+- Screenshot/GIF of the actual app (currently a dashed-border placeholder)
+- Itch.io buy button URL (currently href="#")
+- Mailing list form provider (currently action="#", needs Buttondown or Mailchimp)
+
+---
+
 ## Who the User Is
 
-Not a programmer. Comfortable following instructions and installing tools, but needs things explained. Works a day job and builds this in spare time. See PIH project for full user profile.
+Not a programmer. Comfortable following instructions and installing tools, but needs things explained. Works a day job and builds this in spare time.
 
 ---
 
@@ -20,45 +41,30 @@ Not a programmer. Comfortable following instructions and installing tools, but n
 
 ---
 
-## What the Page Needs
-
-1. **Headline** — what DevForge is in one sentence
-2. **3-4 feature bullets** — modes, git safety, GDD-as-source-of-truth, context management
-3. **Screenshot or GIF** — placeholder for now, will be replaced with real screen recording
-4. **"Buy on Itch — $20" button** — links to Itch.io page (URL TBD)
-5. **Mailing list signup** — for people not ready to buy (provider TBD — Buttondown or Mailchimp free tier)
-
-## What It Does NOT Need (Yet)
-
-- Blog, docs, multi-page anything
-- Custom domain (use GitHub Pages free URL)
-- Payment processing (Itch handles that)
-- JavaScript framework — plain HTML/CSS is fine
-
----
-
 ## Visual Design
 
-The website MUST match DevForge's visual identity. The full design brief is at `visual_design_brief.md` in this repo.
+**SNES Light theme** (changed from CRT Dark during initial build — lighter theme works better for a sales page):
+- Cream base (#F2F0E8), off-cream inset (#E8E6DE), light gray surface (#DEDCD4)
+- Muted accent colors: green (#397239), amber (#7f6125), blue (#49689a), red (#9F3A3A), purple (#6759ad), cyan (#29707b), teal (#2e7969), orange (#96572d), gold (#73651c), lime (#44712b)
+- Text: dark charcoal (#2D2B3D), dim (#636173)
+- Borders: mid-gray (#9A99A0)
+- All colors pass WCAG AA (4.5:1+) on both base and inset backgrounds
 
-**Key points:**
-- **CRT Dark theme** as the default (deep navy-black backgrounds, neon accents)
-- **Press Start 2P** (pixel font) for headings and UI chrome
-- **Share Tech Mono** for body text
-- Both fonts bundled as woff2 in `assets/fonts/` — no CDN
-- Green (#00ff88) primary action color, amber (#ffaa00) secondary
-- 4/8/12/16px spacing grid
-- Retro terminal/hacker aesthetic with subtle CRT scanline overlay
-- All colors must pass WCAG AA contrast (4.5:1+)
+**Typography:**
+- **Press Start 2P** (pixel font) for headings and UI chrome (bundled woff2)
+- **Space Mono** for body text (bundled woff2, replaced Share Tech Mono)
+- Share Tech Mono woff2 still in assets/fonts/ but no longer used on the website
+
+**Spacing:** 4/8/12/16px grid
 
 ---
 
 ## Tech Stack
 
-- Static HTML + CSS (no build step, no framework)
+- Static HTML + CSS + minimal vanilla JS (mode modals)
 - GitHub Pages hosting (free)
 - Fonts bundled locally as woff2
-- No JavaScript required unless needed for mailing list embed
+- No build step, no framework
 
 ---
 
@@ -66,14 +72,18 @@ The website MUST match DevForge's visual identity. The full design brief is at `
 
 ```
 devforge-website/
-  index.html          — the landing page
+  index.html              — the landing page
   css/
-    style.css         — all styles
+    style.css             — all styles
   assets/
-    fonts/            — Press Start 2P + Share Tech Mono woff2 files
-    images/           — screenshots, logo, placeholder images
-  visual_design_brief.md — full design spec (reference, not deployed)
-  CLAUDE.md           — this file
+    fonts/
+      PressStart2P-Regular.woff2
+      SpaceMono-Regular.woff2
+      ShareTechMono-Regular.woff2  (legacy, unused)
+    images/               — empty, awaiting screenshots
+  product_brief.md        — full product spec (reference)
+  visual_design_brief.md  — design system spec (reference)
+  CLAUDE.md               — this file
   .gitignore
 ```
 
@@ -81,53 +91,33 @@ devforge-website/
 
 ## Deployment
 
-GitHub Pages serves from the root of the `main` branch. No build step needed — just push and it's live.
+GitHub Pages serves from the root of the `master` branch. No build step needed — just push and it's live.
 
 ---
 
 ## REQUIRED: Use Design Skills (Not Raw Code)
 
-**Do NOT vibecode this site.** The #1 priority is that this looks like a real product page, not an AI-generated template. To achieve this, you MUST use the following Claude Code skills when building and reviewing the frontend:
+When making visual changes, use the design skill pipeline:
 
-### Skills to invoke:
+| Skill | When to use |
+|---|---|
+| `frontend-design` | When writing any HTML/CSS |
+| `ui-ux-pro-max` | When making design decisions (layout, spacing, color) |
+| `stop-slop` | After writing ANY user-facing text — this is mandatory |
+| `accesslint:contrast-checker` | After changing colors — verify WCAG AA |
+| `accesslint:refactor` | After structural HTML changes |
 
-| Skill | What it does | When to use |
-|---|---|---|
-| `frontend-design` | Production-grade frontend with high design quality | When writing any HTML/CSS for the page |
-| `frontend-design-pro` | Jaw-dropping interfaces + real photo URLs from Unsplash/Pexels | When building hero section, picking images |
-| `ui-ux-pro-max` | 50+ styles, 161 palettes, 57 font pairings, UX guidelines | When making any design decision (layout, spacing, color) |
-| `accesslint:contrast-checker` | WCAG contrast analysis | After setting colors — verify all pass AA |
-| `accesslint:refactor` | Auto-fix accessibility issues | After initial build, before final commit |
-| `stop-slop` | Remove AI writing patterns from prose | After writing ANY user-facing text (headlines, bullets, descriptions) |
-
-### How to use them:
-
-1. **Before writing any HTML/CSS**, invoke `ui-ux-pro-max` to plan the design approach using the CRT Dark palette and retro terminal style from `visual_design_brief.md`
-2. **When building the page**, invoke `frontend-design` or `frontend-design-pro` — do NOT just write raw HTML/CSS from scratch
-3. **After writing any copy** (headline, feature bullets, descriptions), invoke `stop-slop` to strip AI writing patterns. Landing page copy must sound like a human wrote it — no "unleash", "seamlessly", "elevate", "empower", or any of the usual AI tells
-4. **After building**, invoke `accesslint:contrast-checker` to verify all color pairs pass WCAG AA
-5. **Final pass**, invoke `accesslint:refactor` to catch any remaining accessibility issues
-
-### If skills are not installed:
-
-These are Claude Code plugin skills. If they're not available when you start a session, tell the user they need to install them. The install commands are:
-
-```bash
-claude mcp add-skill frontend-design
-claude mcp add-skill frontend-design-pro
-claude mcp add-skill ui-ux-pro-max
-claude mcp add-skill accesslint
-```
-
-If those exact commands don't work, search for the correct install method — these are community skills/plugins for Claude Code. The user has them installed on their home PC but may need to reinstall on their work ThinkPad.
+**stop-slop is not optional.** Run it on every piece of copy before committing.
 
 ---
 
 ## Key Principles
 
-- Match the app's visual identity exactly — this is a premium tool, not a generic landing page
-- Accessibility built in from the start (focus-visible, reduced-motion, contrast)
-- Mobile-responsive (single column on small screens)
-- Fast — no heavy assets, no JS frameworks, minimal dependencies
-- Dense, information-forward design (power-user audience, not consumer)
-- **No AI slop** — no generic hero gradients, no "Welcome to DevForge", no stock startup-page patterns. This should feel like a retro terminal, not a SaaS landing page
+- SNES Light theme with muted colors on cream
+- Pixel font for UI chrome, Space Mono for content
+- Accessibility built in (focus-visible, reduced-motion, contrast)
+- Mobile-responsive (single column at 640px breakpoint)
+- Fast — no heavy assets, no JS frameworks
+- Dense, information-forward (power-user audience)
+- **No AI slop** — no generic patterns, no marketing fluff, no forbidden words
+- **Forbidden words:** "AI-powered", "AI-driven", "seamlessly", "unleash", "elevate", "empower", "revolutionize", "comprehensive", "robust"
