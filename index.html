@@ -4,12 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevForge — Game Development Environment</title>
-    <meta name="description" content="A desktop game development environment that wraps AI coding tools in a structured UI for game designers.">
+    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 12 specialized modes. One-click undo. $9 early access.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- TODO: Build landing page per CLAUDE.md spec -->
-    <h1>DevForge</h1>
-    <p>Coming soon.</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="container">
+        <header class="terminal-header">
+            <div class="prompt">&gt; <span class="brand">DEVFORGE</span><span class="cursor" aria-hidden="true"></span></div>
+        </header>
+
+        <main id="main">
+
+            <!-- Hero -->
+            <section class="hero" aria-labelledby="hero-heading">
+                <h1 id="hero-heading">A game dev terminal that knows your project cold.</h1>
+                <p class="subtext">
+                    Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.
+                </p>
+                <p class="price-line">$9 early access &middot; No subscription &middot; Windows, Mac, Linux</p>
+            </section>
+
+            <!-- Features -->
+            <section class="features" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="sr-only">Features</h2>
+                <div class="features-grid">
+                    <div class="terminal-block glow-green">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--green);">Your GDD Runs the Show</h3>
+                        </div>
+                        <p class="block-body">
+                            Claude reads your design doc before every prompt. Your vision stays intact whether you're writing code, testing balance, or drafting store copy.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-amber">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--amber);">12 Modes, 12 Jobs</h3>
+                        </div>
+                        <p class="block-body">
+                            DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. Each mode gives Claude one job and the right context for it.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-blue">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--blue);">Git Safety Net</h3>
+                        </div>
+                        <p class="block-body">
+                            Session branches, safety snapshots, one-click undo. Built for people who don't touch git and don't want to learn.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-cyan">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--cyan);">Nothing Gets Lost</h3>
+                        </div>
+                        <p class="block-body">
+                            DevForge loads your session notes, task progress, project rules, and GDD sections into every prompt. You pick up exactly where you stopped.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Screenshot -->
+            <section class="screenshot-section" aria-labelledby="screenshot-heading">
+                <h2 id="screenshot-heading" class="sr-only">App Preview</h2>
+                <figure class="screenshot-placeholder" role="img" aria-label="DevForge application screenshot — coming soon">
+                    <span class="placeholder-text">[ screenshot — coming soon ]</span>
+                </figure>
+            </section>
+
+            <!-- Modes -->
+            <section class="modes-section" aria-labelledby="modes-heading">
+                <h2 id="modes-heading">12 modes. One job each.</h2>
+                <ul class="modes-grid">
+                    <li class="mode-cell" style="color: var(--text-primary);">Forge</li>
+                    <li class="mode-cell" style="color: var(--green);">GDD</li>
+                    <li class="mode-cell" style="color: var(--red);">Pitch</li>
+                    <li class="mode-cell" style="color: var(--amber);">Discuss</li>
+                    <li class="mode-cell" style="color: var(--blue);">Implement</li>
+                    <li class="mode-cell" style="color: var(--orange);">Debug</li>
+                    <li class="mode-cell" style="color: var(--cyan);">Research</li>
+                    <li class="mode-cell" style="color: var(--purple);">QA</li>
+                    <li class="mode-cell" style="color: var(--text-dim);">Freeform</li>
+                    <li class="mode-cell" style="color: var(--gold);">Marketing</li>
+                    <li class="mode-cell" style="color: var(--teal);">Instruct</li>
+                    <li class="mode-cell" style="color: var(--lime);">Test</li>
+                </ul>
+                <p class="modes-analog">Plus Analog Mode for board games and wargames.</p>
+            </section>
+
+            <!-- Stacks -->
+            <section class="stacks-line" aria-labelledby="stacks-heading">
+                <h2 id="stacks-heading" class="sr-only">Supported Stacks</h2>
+                <p>Works with <span class="stack-list">Godot, Unity, Phaser, PICO-8</span>, and 12 more.</p>
+            </section>
+
+            <!-- Buy CTA -->
+            <section class="buy-section" aria-labelledby="buy-heading">
+                <h2 id="buy-heading">Get DevForge</h2>
+                <!-- TODO: Replace # with actual itch.io URL -->
+                <a href="#" class="btn-buy">Buy on Itch.io // $9</a>
+                <p class="buy-note">Pay once, keep it. Claude Code subscription sold separately.</p>
+            </section>
+
+            <!-- Mailing List -->
+            <section class="mailing-section" aria-labelledby="mailing-heading">
+                <h2 id="mailing-heading">Not ready yet?</h2>
+                <p class="mailing-subtext">Drop your email. Updates only, no spam.</p>
+                <!-- TODO: Wire to Buttondown or Mailchimp -->
+                <form class="mailing-form" action="#" method="post">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" id="email" name="email" class="input-email" placeholder="you@example.com" required autocomplete="email">
+                    <button type="submit" class="btn-subscribe">Notify Me</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <p class="footer-text">DEVFORGE &mdash; 2026</p>
+        </footer>
+    </div>
 </body>
 </html>

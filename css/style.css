@@ -1,8 +1,539 @@
-/* DevForge Website — Styles
-   See visual_design_brief.md for full design spec.
-   Fonts: Press Start 2P (headings) + Share Tech Mono (body)
-   Theme: CRT Dark
-*/
+/* ============================================
+   DevForge — SNES Light Theme
+   Cleaned-up Super Nintendo UI aesthetic
+   ============================================ */
 
-/* TODO: Add @font-face rules once woff2 files are bundled */
-/* TODO: Implement full design per visual_design_brief.md */
+/* --- @font-face --- */
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../assets/fonts/PressStart2P-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('../assets/fonts/SpaceMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Custom Properties --- */
+:root {
+  --bg-base: #F2F0E8;
+  --bg-inset: #E8E6DE;
+  --bg-surface: #DEDCD4;
+
+  --green: #397239;
+  --amber: #7f6125;
+  --blue: #49689a;
+  --red: #9F3A3A;
+  --purple: #6759ad;
+  --cyan: #29707b;
+  --teal: #2e7969;
+  --orange: #96572d;
+  --gold: #73651c;
+  --lime: #44712b;
+
+  --border: #9A99A0;
+  --border-light: #B8B7BD;
+
+  --text-primary: #2D2B3D;
+  --text-dim: #636173;
+
+  --font-pixel: 'PressStart2P', monospace;
+  --font-mono: 'SpaceMono', monospace;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Skip Link --- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-16);
+  background: var(--bg-surface);
+  color: var(--amber);
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  padding: var(--space-8) var(--space-12);
+  border: 1px solid var(--amber);
+  z-index: 10000;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-8);
+}
+
+/* --- Screen Reader Only --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Focus & Accessibility --- */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  font-family: var(--font-pixel);
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1 {
+  font-size: 14px;
+  color: var(--green);
+}
+
+h2 {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 9px;
+}
+
+p {
+  margin: 0 0 var(--space-12);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Terminal Header --- */
+.terminal-header {
+  padding: var(--space-24) 0 var(--space-8);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-32);
+}
+
+.terminal-header .prompt {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.terminal-header .prompt .brand {
+  color: var(--green);
+}
+
+/* --- Cursor blink --- */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  background: var(--green);
+  margin-left: var(--space-4);
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: var(--space-32) 0 var(--space-48);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-16);
+  max-width: 600px;
+}
+
+.hero .subtext {
+  font-size: 14px;
+  color: var(--text-primary);
+  max-width: 560px;
+  margin-bottom: var(--space-16);
+}
+
+.hero .price-line {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--amber);
+  letter-spacing: 0.5px;
+}
+
+/* --- Terminal Block (Feature Panels) --- */
+.terminal-block {
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  padding: var(--space-16);
+  margin-bottom: var(--space-12);
+  position: relative;
+}
+
+.terminal-block .block-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.terminal-block .prompt-char {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  font-size: 14px;
+  user-select: none;
+}
+
+.terminal-block h3 {
+  display: inline;
+}
+
+.terminal-block .block-body {
+  color: var(--text-primary);
+  font-size: 13px;
+  padding-left: 22px;
+}
+
+/* --- Features Grid --- */
+.features {
+  padding: 0 0 var(--space-32);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+
+/* --- Screenshot Placeholder --- */
+.screenshot-section {
+  padding: 0 0 var(--space-48);
+}
+
+.screenshot-placeholder {
+  border: 2px dashed var(--border);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  margin: 0;
+}
+
+.screenshot-placeholder .placeholder-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.screenshot-placeholder figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Modes Section --- */
+.modes-section {
+  padding: 0 0 var(--space-48);
+}
+
+.modes-section h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-16);
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.mode-cell {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  border: 1px solid var(--border);
+  background: var(--bg-inset);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.modes-analog {
+  font-size: 13px;
+  color: var(--teal);
+}
+
+/* --- Stacks Line --- */
+.stacks-line {
+  padding: 0 0 var(--space-48);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.stacks-line .stack-list {
+  color: var(--text-primary);
+}
+
+/* --- Buy CTA Section --- */
+.buy-section {
+  padding: var(--space-32) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  margin-bottom: var(--space-48);
+}
+
+.buy-section h2 {
+  color: var(--green);
+  margin-bottom: var(--space-24);
+  font-size: 12px;
+}
+
+.btn-buy {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: var(--green);
+  background: transparent;
+  border: 2px solid var(--green);
+  padding: var(--space-12) var(--space-32);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-buy:hover {
+  background: var(--green);
+  color: var(--bg-base);
+  text-decoration: none;
+}
+
+.buy-section .buy-note {
+  margin-top: var(--space-16);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* --- Mailing List Section --- */
+.mailing-section {
+  padding: 0 0 var(--space-48);
+  max-width: 480px;
+}
+
+.mailing-section h2 {
+  color: var(--amber);
+  margin-bottom: var(--space-8);
+}
+
+.mailing-section .mailing-subtext {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: var(--space-16);
+}
+
+.mailing-form {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.input-email {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  padding: var(--space-8) var(--space-12);
+  caret-color: var(--green);
+}
+
+.input-email::placeholder {
+  color: var(--text-dim);
+}
+
+.input-email:focus {
+  border-color: var(--amber);
+  outline: 2px solid var(--amber);
+  outline-offset: -1px;
+}
+
+.btn-subscribe {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--amber);
+  background: transparent;
+  border: 1px solid var(--amber);
+  padding: var(--space-8) var(--space-16);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-subscribe:hover {
+  background: var(--amber);
+  color: var(--bg-base);
+}
+
+/* --- Footer --- */
+.site-footer {
+  padding: var(--space-24) 0;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer .footer-text {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* --- Glow accents on terminal blocks (muted for SNES) --- */
+.terminal-block.glow-green { border-left: 2px solid var(--green); }
+.terminal-block.glow-amber { border-left: 2px solid var(--amber); }
+.terminal-block.glow-blue { border-left: 2px solid var(--blue); }
+.terminal-block.glow-cyan { border-left: 2px solid var(--cyan); }
+
+/* --- Responsive (mobile) --- */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 11px;
+  }
+
+  h2 {
+    font-size: 9px;
+  }
+
+  .container {
+    padding: 0 var(--space-12);
+  }
+
+  .terminal-header {
+    padding-top: var(--space-16);
+    margin-bottom: var(--space-24);
+  }
+
+  .hero {
+    padding: var(--space-24) 0 var(--space-32);
+  }
+
+  .hero .subtext {
+    font-size: 13px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .buy-section {
+    margin-bottom: var(--space-32);
+  }
+
+  .btn-buy {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    padding: var(--space-12) var(--space-16);
+  }
+
+  .mailing-form {
+    flex-direction: column;
+  }
+
+  .btn-subscribe {
+    width: 100%;
+    padding: var(--space-12);
+  }
+
+  .screenshot-section,
+  .modes-section,
+  .stacks-line {
+    padding-bottom: var(--space-32);
+  }
+}
