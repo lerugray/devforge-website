@@ -44,7 +44,7 @@ Not a programmer. Comfortable following instructions and installing tools, but n
 ## Visual Design
 
 **SNES Light theme** (changed from CRT Dark during initial build — lighter theme works better for a sales page):
-- Cream base (#F2F0E8), cool purple-gray inset (#E8E6ED), console gray surface (#D3D3D6)
+- Cool gray base (#E8E6ED), console gray inset (#D3D3D6), darker surface (#C8C7CC)
 - Muted accent colors: green (#336533), amber (#725721), blue (#405b87), red (#8c4747), purple (#5c4fa0), cyan (#256262), teal (#245f43), orange (#7a3d1a), gold (#6a5218), lime (#44712b)
 - Text: dark charcoal (#2D2B3D), dim (#4A485F)
 - Borders: mid-gray (#9A99A0), stronger (#8B8A8D)

@@ -22,9 +22,9 @@
 
 /* --- Custom Properties --- */
 :root {
-  --bg-base: #F2F0E8;
-  --bg-inset: #E8E6ED;
-  --bg-surface: #D3D3D6;
+  --bg-base: #E8E6ED;
+  --bg-inset: #D3D3D6;
+  --bg-surface: #C8C7CC;
 
   --green: #336533;
   --amber: #725721;
