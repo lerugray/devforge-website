@@ -140,6 +140,14 @@
                 </div>
             </section>
 
+            <!-- Parallel Terminals -->
+            <section class="info-section" aria-labelledby="parallel-heading">
+                <h2 id="parallel-heading">Up to 4 sessions at once.</h2>
+                <p>Click + on the terminal tab bar to open a parallel session. Each tab gets its own git worktree, its own branch, its own Claude session with resume. You work on multiple tasks and they stay isolated. When you're done, MERGE folds changes back into your main branch. CLOSE discards.</p>
+                <p>Capped at 4 tabs since each one burns tokens independently. Tab switching is instant. Each terminal keeps its full scrollback.</p>
+                <p>There's also a separate BUILD/TEST terminal (toggle with the BUILD button) that runs your project's build and test commands apart from Claude's output. Stack-aware: <code>cargo build</code> for Rust, <code>npm run build</code> for HTML/Phaser, and so on.</p>
+            </section>
+
             <!-- Tools -->
             <section class="info-section" aria-labelledby="tools-heading">
                 <h2 id="tools-heading">Built-in tools.</h2>
@@ -175,11 +183,18 @@
                 <p><strong>14 analog:</strong> Rules writing, component design, balance &amp; probability, hex maps, area movement, point-to-point maps, solitaire bot systems, wargame scale, VASSAL modules, Tabletop Simulator mods, print &amp; play layout, Nandeck card layout.</p>
             </section>
 
-            <!-- Stacks & Providers -->
+            <!-- Stacks -->
             <section class="info-section" aria-labelledby="stacks-heading">
-                <h2 id="stacks-heading">16 platforms. 4 providers.</h2>
-                <p>Godot 4, Unity, Unreal, Rust, Python, Love2D, GameMaker, RPG Maker, Phaser 3, HTML5, PICO-8, GB Studio, NES, Game Boy, Genesis, GBA. Plus a stack-agnostic "Undecided" option where FORGE recommends the right platform after learning your game.</p>
-                <p>Works with Claude Code (recommended), Aider, Codex CLI, and Gemini CLI. Switch providers in the footer. Claude Code gets the richest integration. Other providers start fresh each prompt, so DevForge injects heavier context to compensate.</p>
+                <h2 id="stacks-heading">16 platforms.</h2>
+                <p>Godot 4, Unity, Unreal, Rust, Python, Love2D, GameMaker, RPG Maker, Phaser 3, HTML5, PICO-8, GB Studio, NES, Game Boy, Genesis, GBA. Plus a stack-agnostic "Undecided" option where FORGE recommends the right platform after learning your game. DevForge injects stack-specific build commands, docs links, and coding conventions into your prompts.</p>
+            </section>
+
+            <!-- Providers -->
+            <section class="info-section" aria-labelledby="providers-heading">
+                <h2 id="providers-heading">Built for Claude Code. Open to others.</h2>
+                <p>Claude Code is the tested, recommended provider. You get session resume, streaming JSON output, direct file editing, context window tracking, and cost reporting. DevForge detects your CLI version at startup and warns you if an update changes something.</p>
+                <p>Aider, Codex CLI, and Gemini CLI are configured and the architecture supports them, but they haven't been tested in real workflows yet. For providers without session memory, DevForge injects heavier context: session notes, conversation log, GDD sections, code map.</p>
+                <p class="callout-text">Looking for testers willing to try DevForge with Aider, Codex, or Gemini and report back. Free access for multi-provider testers.</p>
             </section>
 
             <!-- The Details -->
@@ -193,8 +208,10 @@
                     <li><strong>Knowledge Banks</strong> Per-project storage for Research, QA, Marketing, and Instruct, plus a global cross-project bank.</li>
                     <li><strong>PDF Export</strong> One-pagers, press kits, and save-as-PDF from Marketing mode.</li>
                     <li><strong>Session Transcripts</strong> Claude responses saved as timestamped markdown to disk.</li>
-                    <li><strong>/CONTEXT</strong> Live session state: model, CLI version, context window usage, token breakdown, cost.</li>
-                    <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average.</li>
+                    <li><strong>Cost Tracking</strong> Footer shows "WORK DONE: $X.XX" with color-coded daily spend. Per-project totals so you see which games get the most AI investment. DevForge tracks usage against your existing AI subscription. No separate billing.</li>
+                    <li><strong>/CONTEXT</strong> Live session state: model, CLI version, context window usage bar (color-coded), token breakdown including cache hits, session cost.</li>
+                    <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average. Powered by ccusage.</li>
+                    <li><strong>CLI Resilience</strong> DevForge detects your provider's CLI version at startup. If an update introduces breaking changes, you get a warning in the log panel instead of silent failures.</li>
                     <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
                     <li><strong>Oryx Sprites + SFX</strong> 12 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
                 </ul>
