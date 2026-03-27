@@ -26,6 +26,12 @@
                 <p class="price-line">$9 early access &middot; No subscription &middot; Windows, Mac, Linux</p>
             </section>
 
+            <!-- Positioning -->
+            <section class="positioning" aria-labelledby="positioning-heading">
+                <h2 id="positioning-heading" class="sr-only">What DevForge Is</h2>
+                <p class="callout-text">DevForge is not a game engine and it's not going to design your game. It's a structured UI that wraps AI coding tools. You make the design decisions. DevForge handles context, modes, and version control so Claude stays focused on your project.</p>
+            </section>
+
             <!-- Features -->
             <section class="features" aria-labelledby="features-heading">
                 <h2 id="features-heading" class="sr-only">Features</h2>
@@ -97,13 +103,101 @@
                     <li><button class="mode-cell" style="color: var(--teal);" data-mode="instruct">Instruct</button></li>
                     <li><button class="mode-cell" style="color: var(--lime);" data-mode="test">Test</button></li>
                 </ul>
-                <p class="modes-analog">Plus Analog Mode for board games and wargames.</p>
             </section>
 
-            <!-- Stacks -->
-            <section class="stacks-line" aria-labelledby="stacks-heading">
-                <h2 id="stacks-heading" class="sr-only">Supported Stacks</h2>
-                <p>Works with <span class="stack-list">Godot, Unity, Phaser, PICO-8</span>, and 12 more.</p>
+            <!-- Analog Mode -->
+            <section class="info-section" aria-labelledby="analog-heading">
+                <h2 id="analog-heading">Analog Mode for tabletop design.</h2>
+                <p>Toggle Analog in the footer and all 12 modes shift to tabletop. IMPLEMENT writes rules text and component specs instead of code. DEBUG finds rules contradictions. QA audits component consistency and first-play clarity. MARKETING writes Kickstarter pages and BoardGameGeek listings.</p>
+                <p>Design a board game with Analog on, then flip it off and use Implement to build the digital version. Your GDD carries over.</p>
+            </section>
+
+            <!-- Session Workflow -->
+            <section class="info-section" aria-labelledby="workflow-heading">
+                <h2 id="workflow-heading">START. Work. END.</h2>
+                <div class="workflow-steps">
+                    <div class="terminal-block">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--green);">START</h3>
+                        </div>
+                        <p class="block-body">Creates a safety snapshot and optionally a session branch. If Ollama is running, it summarizes your project state so Claude starts oriented.</p>
+                    </div>
+                    <div class="terminal-block">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--blue);">Work</h3>
+                        </div>
+                        <p class="block-body">Pick a mode, type what you want, send. Your project context ships with each prompt. The diff viewer, task panel, and git status refresh after each response.</p>
+                    </div>
+                    <div class="terminal-block">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--amber);">END</h3>
+                        </div>
+                        <p class="block-body">Review all changes in the diff viewer. Write session notes (free via Ollama, or use Claude). Undo the entire session back to the snapshot if anything went wrong.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools -->
+            <section class="info-section" aria-labelledby="tools-heading">
+                <h2 id="tools-heading">Built-in tools.</h2>
+                <div class="features-grid">
+                    <div class="terminal-block glow-cyan">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--cyan);">BookFinder General</h3>
+                        </div>
+                        <p class="block-body">MCP server for Research mode. Hit BOOK SEARCH and Claude searches Anna's Archive, downloads the best match, extracts text, and summarizes findings for your project. Summaries save to the knowledge bank and show up in future prompts. Optional, free.</p>
+                    </div>
+                    <div class="terminal-block glow-amber">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--amber);">Anti-Slop Filter</h3>
+                        </div>
+                        <p class="block-body">10-rule post-processing system applied to share summaries, Marketing output, and AI-generated session notes. Strips em dashes, filler phrases, passive voice, and false agency. Your writing sounds like you wrote it.</p>
+                    </div>
+                </div>
+                <div class="terminal-block" style="margin-top: var(--space-12);">
+                    <div class="block-header">
+                        <span class="prompt-char" aria-hidden="true">&gt;</span>
+                        <h3 style="color: var(--purple);">Ollama (Free Local AI)</h3>
+                    </div>
+                    <p class="block-body">Optional. Runs seven features locally so you don't burn provider tokens: AI Notes (session summaries), smart context briefings, prompt expansion, smart routing for read/summarize tasks, diff descriptions, GDD section suggestions, and an interactive ASK bot for DevForge help. Everything works without it. You just lose the free stuff.</p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="info-section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">44 skills. Injected when relevant.</h2>
+                <p><strong>30 digital:</strong> Roguelike architecture, platformer mechanics, state machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, animation, audio, particles, shaders, plus stack-specific patterns for all 16 platforms.</p>
+                <p><strong>14 analog:</strong> Rules writing, component design, balance &amp; probability, hex maps, area movement, point-to-point maps, solitaire bot systems, wargame scale, VASSAL modules, Tabletop Simulator mods, print &amp; play layout, Nandeck card layout.</p>
+            </section>
+
+            <!-- Stacks & Providers -->
+            <section class="info-section" aria-labelledby="stacks-heading">
+                <h2 id="stacks-heading">16 platforms. 4 providers.</h2>
+                <p>Godot 4, Unity, Unreal, Rust, Python, Love2D, GameMaker, RPG Maker, Phaser 3, HTML5, PICO-8, GB Studio, NES, Game Boy, Genesis, GBA. Plus a stack-agnostic "Undecided" option where FORGE recommends the right platform after learning your game.</p>
+                <p>Works with Claude Code (recommended), Aider, Codex CLI, and Gemini CLI. Switch providers in the footer. Claude Code gets the richest integration. Other providers start fresh each prompt, so DevForge injects heavier context to compensate.</p>
+            </section>
+
+            <!-- The Details -->
+            <section class="info-section" aria-labelledby="details-heading">
+                <h2 id="details-heading">Everything else.</h2>
+                <ul class="detail-list">
+                    <li><strong>Voice Profile</strong> Paste writing samples into Marketing mode. You get output in your voice.</li>
+                    <li><strong>Code Map</strong> Auto-generated file structure summary. Claude doesn't waste tokens exploring your repo.</li>
+                    <li><strong>Phase Tracker</strong> Visual progress bar parsed from your task list checkboxes.</li>
+                    <li><strong>Scope Meter</strong> LOW / MODERATE / HIGH complexity indicator included in prompts as guardrails.</li>
+                    <li><strong>Knowledge Banks</strong> Per-project storage for Research, QA, Marketing, and Instruct, plus a global cross-project bank.</li>
+                    <li><strong>PDF Export</strong> One-pagers, press kits, and save-as-PDF from Marketing mode.</li>
+                    <li><strong>Session Transcripts</strong> Claude responses saved as timestamped markdown to disk.</li>
+                    <li><strong>/CONTEXT</strong> Live session state: model, CLI version, context window usage, token breakdown, cost.</li>
+                    <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average.</li>
+                    <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
+                    <li><strong>Oryx Sprites + SFX</strong> 12 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
+                </ul>
             </section>
 
             <!-- Buy CTA -->
@@ -149,15 +243,15 @@
         var modes = {
             forge: {
                 name: "FORGE",
-                desc: "You describe your game. Forge asks targeted questions, then builds your GDD, task list, and project rules."
+                desc: "You describe your game. Forge walks you through targeted questions using a complexity bar, then builds your GDD, task list, and project rules. Seven starter templates: platformer, roguelike, card game, visual novel, tower defense, puzzle, top-down RPG."
             },
             gdd: {
                 name: "GDD",
-                desc: "Updates your GDD. Adds mechanics, checks consistency, tracks changes. Refuses to write code."
+                desc: "Updates your Game Design Document. Adds mechanics, checks internal consistency, tracks changes across sections. Refuses to write code."
             },
             pitch: {
                 name: "PITCH",
-                desc: "Stress-tests your design. Finds scope creep, mechanical contradictions, and feature bloat. Tells you what to cut. Not polite about it."
+                desc: "Stress-tests your design for solo dev scope. Finds mechanical contradictions, feature bloat, and scope creep. Tells you what to cut. Not polite about it."
             },
             discuss: {
                 name: "DISCUSS",
@@ -165,7 +259,7 @@
             },
             implement: {
                 name: "IMPLEMENT",
-                desc: "Writes code with your GDD loaded and your current phase in view. Knows your stack, follows your project conventions, auto-checkpoints on request."
+                desc: "Writes code with your GDD and current phase loaded. Knows your stack, follows your project conventions. Auto-checkpoint verifies builds after changes."
             },
             debug: {
                 name: "DEBUG",
@@ -173,27 +267,27 @@
             },
             research: {
                 name: "RESEARCH",
-                desc: "Search, download, and summarize reference material. Findings stick around between sessions so you don't look up the same thing twice."
+                desc: "Your research bank persists between sessions. Search, download, and summarize books via BookFinder General. Findings get included in future prompts."
             },
             qa: {
                 name: "QA",
-                desc: "Systematic testing audit. Claude walks through your game looking for bugs, then files each one as Blocking, Annoying, or Cosmetic. Reports only. Doesn't fix."
+                desc: "Systematic testing audit. Claude walks through your game and files each issue as Blocking, Annoying, or Cosmetic. Reports only. Doesn't fix."
             },
             freeform: {
                 name: "FREEFORM",
-                desc: "No guardrails. Think out loud about anything project-related. Claude follows your lead without enforcing mode discipline."
+                desc: "No guardrails and no role enforcement. Think out loud about anything project-related. Claude follows your lead."
             },
             marketing: {
                 name: "MARKETING",
-                desc: "Store listings, devlogs, social posts. Built-in anti-AI-voice filter runs every output through 10 rules so it sounds like you wrote it, not a chatbot."
+                desc: "Store listings, devlogs, social posts. Set a voice profile with your writing samples. Anti-slop filter runs every output through 10 rules so it sounds like you wrote it. PDF export for one-pagers and press kits."
             },
             instruct: {
                 name: "INSTRUCT",
-                desc: "Step-by-step walkthroughs with exact button names, menu paths, and screenshots. You learn the tool, not just get code dropped on you."
+                desc: "Step-by-step walkthroughs with exact button names, menu paths, and numbered steps. You learn the tool, not just get code dropped on you."
             },
             test: {
                 name: "TEST",
-                desc: "Playtest logging. Tag each observation as bug, balance issue, question, or working-as-intended. Route tagged items to Debug, Discuss, or QA with one click."
+                desc: "Playtest logging. Tag each observation as BUG, BALANCE, QUESTION, or WORKING. Route tagged items to Debug, Discuss, or QA with one click."
             }
         };
 

@@ -541,6 +541,65 @@ p:last-child {
   margin: 0;
 }
 
+/* --- Positioning Callout --- */
+.positioning {
+  padding: 0 0 var(--space-32);
+}
+
+.callout-text {
+  font-size: 14px;
+  color: var(--text-dim);
+  max-width: 600px;
+  border-left: 2px solid var(--border);
+  padding-left: var(--space-16);
+}
+
+/* --- Info Sections --- */
+.info-section {
+  padding: 0 0 var(--space-48);
+}
+
+.info-section h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-16);
+}
+
+.info-section p {
+  font-size: 13px;
+}
+
+/* --- Workflow Steps --- */
+.workflow-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-12);
+}
+
+/* --- Detail List --- */
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8) var(--space-16);
+}
+
+.detail-list li {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: var(--space-8);
+  border-left: 1px solid var(--border);
+}
+
+.detail-list li strong {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
 /* --- Glow accents on terminal blocks (muted for SNES) --- */
 .terminal-block.glow-green { border-left: 2px solid var(--green); }
 .terminal-block.glow-amber { border-left: 2px solid var(--amber); }
@@ -605,7 +664,15 @@ p:last-child {
 
   .screenshot-section,
   .modes-section,
-  .stacks-line {
+  .info-section {
     padding-bottom: var(--space-32);
+  }
+
+  .workflow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-list {
+    grid-template-columns: 1fr;
   }
 }
