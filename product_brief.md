@@ -53,7 +53,7 @@ DevForge solves all four by making your Game Design Document (GDD) the source of
 
 ---
 
-## The 12 Modes
+## The 14 Modes
 
 Each mode has its own color, system prompt, and quick-action buttons. Claude behaves differently depending on the active mode.
 
@@ -71,12 +71,14 @@ Each mode has its own color, system prompt, and quick-action buttons. Claude beh
 | **MARKETING** | Gold | Store listings, devlogs, social posts. Built-in anti-AI-voice filter makes output sound human |
 | **INSTRUCT** | Teal | Step-by-step walkthroughs with exact button names and menu paths |
 | **TEST** | Lime | Playtest logging. Tag observations as bug/balance/question/working, then route to other modes |
+| **SECURITY** | Crimson | OWASP audits, dependency scanning, threat modeling, code review, auth review, data flow mapping. Analog override for rules integrity |
+| **UI/UX** | Pink | WCAG compliance, layout review, contrast checking, user flow analysis, responsive audit, accessibility tree. Analog override for component usability |
 
 ---
 
 ## Analog Mode (Board/Tabletop Games)
 
-Toggle ANALOG in the footer and all 12 modes adapt:
+Toggle ANALOG in the footer and all 14 modes adapt:
 
 - Implement writes rules text and component specs instead of code
 - Debug finds rules contradictions and edge cases
@@ -148,22 +150,51 @@ This is what makes DevForge different from raw Claude Code. Claude starts every 
 
 ---
 
-## Skill Library (44 Skills)
+## Skill Library (47 Skills)
 
 Toggle skills ON in the sidebar; they auto-inject best-practice context into prompts.
 
-- **30 digital skills:** State machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, UI state, animation, audio, particles, shaders, performance, plus stack-specific conventions
+- **33 digital skills:** State machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, UI state, animation, audio, particles, shaders, performance, OWASP security auditing, WCAG accessibility, visual diagrams & charts, plus stack-specific conventions
 - **14 analog skills:** Rules writing, component design, balance & probability, hex maps, area/point-to-point movement, solitaire bot systems, VASSAL, Tabletop Simulator, print & play layout
 
 ---
 
 ## Polish & Personality
 
-- **Oryx 8-bit sprites** — 12 randomized pixel characters (knight, mage, archer, etc.) with idle, running, success, and error animations
+- **Oryx 8-bit sprites** — 14 randomized pixel characters (knight, mage, archer, etc.) with idle, running, success, and error animations
 - **Retro sound effects** — Boot chime, mode switch clicks, send/success/error sounds (all toggleable)
 - **CRT scanline overlay** — Subtle retro screen effect (toggleable)
 - **Boot animation** — Pixel character plays on launch
 - **Anti-AI-voice filter** — 10-rule system strips AI writing patterns from Marketing mode output
+
+---
+
+## Dynamic Learning System
+
+After each session, Ollama analyzes the transcript and suggests project rules — corrections, conventions, gotchas discovered during the session. You review, edit, accept, or reject each rule before it's written to your project's CLAUDE.md. Claude reads CLAUDE.md every session, so the AI gets smarter about your project over time.
+
+- **SAVE RULE** quick action in every mode for manual rule capture
+- **Inline rule bar** below the prompt input for quick rule entry
+- **Deduplication engine** prevents duplicate rules
+- Works without Ollama for manual rules; auto-extraction requires Ollama
+
+---
+
+## Activity Feed & Thinking Display
+
+- **Real-time activity feed** above the terminal shows what Claude is doing: file reads, edits, bash commands, color-coded
+- **Thinking display** — toggle to see Claude's reasoning stream as it works
+- **Escape-to-cancel** — press Escape to stop Claude mid-execution
+- Per-tab activity feeds for worktree tabs
+
+---
+
+## Session Intelligence
+
+- **ASK bot with live Claude context** — while Claude is working, the ASK bot (Ollama, free) can see the current task, activity feed, and recent output. Ask "what is Claude doing right now?" and get a live answer
+- **Transcript browser** — every Claude response is saved as markdown. Browse, view, rename, filter, or delete past transcripts. Load a past transcript as context for your next prompt
+- **Diagram generation** — quick actions in 8 modes to generate architecture diagrams, flowcharts, infographics, and comparison charts as PNG. Mention "diagram" or "chart" in any task and the render skill auto-injects
+- **Auto-complexity indicator** — scope bar auto-calculates project complexity from lines of code, file count, git commits, GDD size, tasks, and stack. In Forge mode it switches to manual target mode
 
 ---
 
@@ -213,11 +244,14 @@ There is no other game-design-specific AI wrapper on the market. DevForge sits i
 **What to emphasize:**
 - Your GDD becomes the source of truth — not vague prompts
 - Never re-explain your project between sessions
-- 12 specialized modes keep Claude focused on one job at a time
+- 14 specialized modes keep Claude focused on one job at a time
+- Claude learns your project rules over time
+- See what Claude is doing in real time (activity feed)
+- Browse your full conversation history (transcript browser)
+- Generate diagrams and visual aids directly
 - One-click undo if Claude goes off the rails
 - Works with 16 game dev stacks
 - Analog mode for board game / wargame designers
-- $20, one-time, no subscription
 
 **What NOT to say:**
 - Don't call it "AI-powered" or "AI-driven" (everyone says that, it means nothing)

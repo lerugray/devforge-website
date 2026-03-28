@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevForge — Game Development Environment</title>
-    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 12 specialized modes. One-click undo. $9 early access. Windows, Mac and Linux coming.">
+    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 14 specialized modes. One-click undo. $9 early access. Windows, Mac and Linux coming.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -63,20 +63,20 @@
                     <div class="tile t-brick"></div>
                     <!-- Row 2: Floor with characters and objects -->
                     <div class="tile t-floor"><img src="assets/images/sprites/world/scenery_barrel.png" class="sprite-overlay" alt=""></div>
-                    <div class="tile t-floord"><img src="assets/images/sprites/characters/knight_idle_d_1.png" class="sprite-overlay" alt=""></div>
+                    <div class="tile t-floord"><span class="sprite-anim sprite-overlay"><img src="assets/images/sprites/characters/knight_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/knight_idle_d_2.png" alt=""></span></div>
                     <div class="tile t-floor"></div>
                     <div class="tile t-floord"><img src="assets/images/sprites/world/object_chest.png" class="sprite-overlay" alt=""></div>
                     <div class="tile t-floor"></div>
-                    <div class="tile t-floor"><img src="assets/images/sprites/world/scenery_firepit_lit_1.png" class="sprite-overlay" alt=""></div>
+                    <div class="tile t-floor"><span class="sprite-anim sprite-overlay"><img src="assets/images/sprites/world/scenery_firepit_lit_1.png" alt=""><img src="assets/images/sprites/world/scenery_firepit_lit_2.png" alt=""></span></div>
                     <div class="tile t-floord"></div>
-                    <div class="tile t-floor"><img src="assets/images/sprites/characters/mage_idle_d_1.png" class="sprite-overlay" alt=""></div>
+                    <div class="tile t-floor"><span class="sprite-anim sprite-overlay"><img src="assets/images/sprites/characters/mage_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/mage_idle_d_2.png" alt=""></span></div>
                     <div class="tile t-floor"></div>
                     <div class="tile t-floord"><img src="assets/images/sprites/world/object_sword.png" class="sprite-overlay" alt=""></div>
                     <div class="tile t-floor"></div>
-                    <div class="tile t-floor"><img src="assets/images/sprites/characters/archer_idle_d_1.png" class="sprite-overlay" alt=""></div>
+                    <div class="tile t-floor"><span class="sprite-anim sprite-overlay"><img src="assets/images/sprites/characters/archer_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/archer_idle_d_2.png" alt=""></span></div>
                     <div class="tile t-floord"></div>
                     <div class="tile t-floor"><img src="assets/images/sprites/world/object_scroll.png" class="sprite-overlay" alt=""></div>
-                    <div class="tile t-floor"><img src="assets/images/sprites/characters/thief_idle_d_1.png" class="sprite-overlay" alt=""></div>
+                    <div class="tile t-floor"><span class="sprite-anim sprite-overlay"><img src="assets/images/sprites/characters/thief_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/thief_idle_d_2.png" alt=""></span></div>
                 </div>
             </div>
 
@@ -103,7 +103,7 @@
                     <div class="terminal-block glow-amber">
                         <div class="block-header">
                             <span class="prompt-char" aria-hidden="true">&gt;</span>
-                            <h3 style="color: var(--amber);">12 Modes, 12 Jobs</h3>
+                            <h3 style="color: var(--amber);">14 Modes, 14 Jobs</h3>
                         </div>
                         <p class="block-body">
                             DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. Each mode gives Claude one job and the right context for it.
@@ -127,6 +127,26 @@
                         </div>
                         <p class="block-body">
                             Your session notes, task progress, project rules, and GDD sections ship with each prompt. You pick up exactly where you stopped.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-purple">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--purple);">Claude Learns Your Rules</h3>
+                        </div>
+                        <p class="block-body">
+                            After each session, Ollama reads the transcript and suggests project rules: corrections, conventions, gotchas you hit during the session. Accept, edit, or reject each one. Claude reads them next session.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-orange">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--orange);">Watch Claude Work</h3>
+                        </div>
+                        <p class="block-body">
+                            A live activity feed shows every file read, edit, and bash command. Toggle the thinking display to see Claude's reasoning. Press Escape to stop mid-execution.
                         </p>
                     </div>
                 </div>
@@ -159,7 +179,7 @@
 
             <!-- Modes -->
             <section class="modes-section" aria-labelledby="modes-heading">
-                <h2 id="modes-heading">12 modes. One job each.</h2>
+                <h2 id="modes-heading">14 modes. One job each.</h2>
                 <ul class="modes-grid">
                     <li><button class="mode-cell" style="color: var(--text-primary);" data-mode="forge">Forge</button></li>
                     <li><button class="mode-cell" style="color: var(--green);" data-mode="gdd">GDD</button></li>
@@ -173,27 +193,31 @@
                     <li><button class="mode-cell" style="color: var(--gold);" data-mode="marketing">Marketing</button></li>
                     <li><button class="mode-cell" style="color: var(--teal);" data-mode="instruct">Instruct</button></li>
                     <li><button class="mode-cell" style="color: var(--lime);" data-mode="test">Test</button></li>
+                    <li><button class="mode-cell" style="color: var(--crimson);" data-mode="security">Security</button></li>
+                    <li><button class="mode-cell" style="color: var(--pink);" data-mode="uiux">UI/UX</button></li>
                 </ul>
                 <div class="character-parade" aria-hidden="true">
-                    <img src="assets/images/sprites/characters/knight_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/mage_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/archer_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/warrior_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/wizard_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/thief_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/valkyrie_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/paladin_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/cleric_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/bard_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/druid_idle_d_1.png" alt="">
-                    <img src="assets/images/sprites/characters/pirate_idle_d_1.png" alt="">
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/knight_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/knight_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/mage_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/mage_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/archer_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/archer_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/warrior_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/warrior_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/wizard_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/wizard_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/thief_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/thief_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/valkyrie_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/valkyrie_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/paladin_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/paladin_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/cleric_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/cleric_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/bard_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/bard_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/druid_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/druid_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/pirate_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/pirate_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/monk_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/monk_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/elf_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/elf_idle_d_2.png" alt=""></span>
                 </div>
             </section>
 
             <!-- Analog Mode -->
             <section class="info-section" aria-labelledby="analog-heading">
                 <h2 id="analog-heading">Analog Mode for tabletop design.</h2>
-                <p>Toggle Analog in the footer and all 12 modes shift to tabletop. IMPLEMENT writes rules text and component specs instead of code. DEBUG finds rules contradictions. QA audits component consistency and first-play clarity. MARKETING writes Kickstarter pages and BoardGameGeek listings.</p>
+                <p>Toggle Analog in the footer and all 14 modes shift to tabletop. IMPLEMENT writes rules text and component specs instead of code. DEBUG finds rules contradictions. QA audits component consistency and first-play clarity. MARKETING writes Kickstarter pages and BoardGameGeek listings.</p>
                 <p>Design a board game with Analog on, then flip it off and use Implement to build the digital version. Your GDD carries over.</p>
             </section>
 
@@ -257,14 +281,14 @@
                         <span class="prompt-char" aria-hidden="true">&gt;</span>
                         <h3 style="color: var(--purple);">Ollama (Free Local AI)</h3>
                     </div>
-                    <p class="block-body">Optional. Runs seven features locally so you don't burn provider tokens: AI Notes (session summaries), smart context briefings, prompt expansion, smart routing for read/summarize tasks, diff descriptions, GDD section suggestions, and an interactive ASK bot for DevForge help. Everything works without it. You just lose the free stuff.</p>
+                    <p class="block-body">Optional. Runs locally so you don't burn provider tokens: AI Notes, smart context briefings, prompt expansion, smart routing, diff descriptions, GDD suggestions, project rule extraction, and an ASK bot with live visibility into Claude's current task. Ask "what is Claude working on?" mid-session and get a real answer. Everything works without Ollama. You just lose the free stuff.</p>
                 </div>
             </section>
 
             <!-- Skills -->
             <section class="info-section" aria-labelledby="skills-heading">
-                <h2 id="skills-heading">44 skills. Injected when relevant.</h2>
-                <p><strong>30 digital:</strong> Roguelike architecture, platformer mechanics, state machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, animation, audio, particles, shaders, plus stack-specific patterns for all 16 platforms.</p>
+                <h2 id="skills-heading">47 skills. Injected when relevant.</h2>
+                <p><strong>33 digital:</strong> Roguelike architecture, platformer mechanics, state machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, animation, audio, particles, shaders, OWASP security auditing, WCAG accessibility, visual diagrams &amp; charts, plus stack-specific patterns for all 16 platforms.</p>
                 <p><strong>14 analog:</strong> Rules writing, component design, balance &amp; probability, hex maps, area movement, point-to-point maps, solitaire bot systems, wargame scale, VASSAL modules, Tabletop Simulator mods, print &amp; play layout, Nandeck card layout.</p>
             </section>
 
@@ -296,16 +320,17 @@
                     <li><strong>Voice Profile</strong> Paste writing samples into Marketing mode. You get output in your voice.</li>
                     <li><strong>Code Map</strong> Auto-generated file structure summary. Claude doesn't waste tokens exploring your repo.</li>
                     <li><strong>Phase Tracker</strong> Visual progress bar parsed from your task list checkboxes.</li>
-                    <li><strong>Scope Meter</strong> LOW / MODERATE / HIGH complexity indicator included in prompts as guardrails.</li>
+                    <li><strong>Scope Meter</strong> Auto-calculated from lines of code, file count, git commits, GDD size, tasks, and stack. Ships with every prompt as a guardrail. Switches to manual target mode in Forge.</li>
                     <li><strong>Knowledge Banks</strong> Per-project storage for Research, QA, Marketing, and Instruct, plus a global cross-project bank.</li>
                     <li><strong>PDF Export</strong> One-pagers, press kits, and save-as-PDF from Marketing mode.</li>
-                    <li><strong>Session Transcripts</strong> Claude responses saved as timestamped markdown to disk.</li>
+                    <li><strong>Session Transcripts</strong> Every Claude response saved as markdown. Browse, rename, filter, or delete past transcripts. Load any transcript as context for your next prompt.</li>
+                    <li><strong>Diagram Generation</strong> Quick actions in 8 modes to generate architecture diagrams, flowcharts, infographics, and comparison charts as PNG. Mention "diagram" or "chart" in any task and the render skill auto-injects.</li>
                     <li><strong>Cost Tracking</strong> Footer shows "WORK DONE: $X.XX" with color-coded daily spend. Per-project totals so you see which games get the most AI investment. DevForge tracks usage against your existing AI subscription. No separate billing.</li>
                     <li><strong>/CONTEXT</strong> Live session state: model, CLI version, context window usage bar (color-coded), token breakdown including cache hits, session cost.</li>
                     <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average. Powered by ccusage.</li>
                     <li><strong>CLI Resilience</strong> DevForge detects your provider's CLI version at startup. If an update introduces breaking changes, you get a warning in the log panel instead of silent failures.</li>
                     <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
-                    <li><strong>Oryx Sprites + SFX</strong> 12 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
+                    <li><strong>Oryx Sprites + SFX</strong> 14 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
                 </ul>
             </section>
 
@@ -397,6 +422,14 @@
             test: {
                 name: "TEST",
                 desc: "Playtest logging. Tag each observation as BUG, BALANCE, QUESTION, or WORKING. Route tagged items to Debug, Discuss, or QA with one click."
+            },
+            security: {
+                name: "SECURITY",
+                desc: "OWASP audit, dependency scan, threat modeling, code review, auth review, data flow mapping. Has an analog override for rules integrity auditing in tabletop projects."
+            },
+            uiux: {
+                name: "UI/UX",
+                desc: "WCAG audit, layout review, contrast checking, user flow analysis, responsive audit, accessibility tree inspection. Has an analog override for component usability testing."
             }
         };
 
