@@ -8,3 +8,10 @@ desktop.ini
 *.swp
 *.swo
 *~
+
+# Deployment
+.wrangler/
+wrangler.toml
+.env*
+*.env
+node_modules/
