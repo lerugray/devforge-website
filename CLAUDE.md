@@ -91,7 +91,14 @@ devforge-website/
 
 ## Deployment
 
-GitHub Pages serves from the root of the `master` branch. No build step needed — just push and it's live.
+**Cloudflare Pages via Wrangler.** Git push alone does NOT deploy the site.
+
+After every push, run:
+```
+npx wrangler pages deploy . --project-name devforge-website
+```
+
+The project is `devforge-website` on Cloudflare Pages, serving `usedevforge.com`.
 
 ---
 
