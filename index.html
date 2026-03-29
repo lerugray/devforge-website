@@ -276,9 +276,9 @@
                     <div class="terminal-block glow-cyan">
                         <div class="block-header">
                             <span class="prompt-char" aria-hidden="true">&gt;</span>
-                            <h3 style="color: var(--cyan);">BookFinder General</h3>
+                            <h3 style="color: var(--cyan);">Live Research Tools</h3>
                         </div>
-                        <p class="block-body">MCP server for Research mode. Hit BOOK SEARCH and Claude searches Anna's Archive, downloads the best match, extracts text, and summarizes findings for your project. Summaries save to the knowledge bank and show up in future prompts. Optional, free.</p>
+                        <p class="block-body">Research mode searches the live web, downloads and summarizes books, and checks what's trending in game dev. SETUP RESEARCH walks you through installing the tools. DevForge saves your findings to the knowledge bank and includes them in future prompts. Optional, free.</p>
                     </div>
                     <div class="terminal-block glow-amber">
                         <div class="block-header">
@@ -343,6 +343,19 @@
                     <li><strong>CLI Resilience</strong> DevForge detects your provider's CLI version at startup. If an update introduces breaking changes, you get a warning in the log panel instead of silent failures.</li>
                     <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
                     <li><strong>Oryx Sprites + SFX</strong> 14 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
+                </ul>
+            </section>
+
+            <!-- Roadmap -->
+            <section class="info-section" aria-labelledby="roadmap-heading">
+                <h2 id="roadmap-heading">What's next.</h2>
+                <ul class="detail-list">
+                    <li><strong>MOD Mode</strong> Build mods for Skyrim, Minecraft, Factorio, Rimworld, and other games. Modding is how many developers start.</li>
+                    <li><strong>Git Panel</strong> Connect GitHub, create repos, manage branches from inside DevForge. No terminal required.</li>
+                    <li><strong>Autonomous Jobs</strong> Set a worktree tab to a mode and goal. Let it work through a task sequence on its own with a time cap.</li>
+                    <li><strong>Playtest Assets</strong> Auto-generate wargame counter sheets, hex maps, card layouts, and placeholder tilesets for prototyping.</li>
+                    <li><strong>Model Selection</strong> Pick Opus, Sonnet, or Haiku per task. Or let DevForge auto-route based on mode and complexity.</li>
+                    <li><strong>LENS Mode</strong> Editorial and sensitivity review. Flags cultural representation issues, content rating implications, and regional concerns. You decide what to act on.</li>
                 </ul>
             </section>
 
@@ -411,7 +424,7 @@
             },
             research: {
                 name: "RESEARCH",
-                desc: "Your research bank persists between sessions. Search, download, and summarize books via BookFinder General. Findings get included in future prompts."
+                desc: "Live web search, book downloads, and trending topic tracking. Your research bank persists between sessions. SETUP RESEARCH walks you through installing web tools. WEB SEARCH pulls live data. TRENDING checks what the game dev community is discussing right now."
             },
             qa: {
                 name: "QA",

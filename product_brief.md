@@ -65,7 +65,7 @@ Each mode has its own color, system prompt, and quick-action buttons. Claude beh
 | **DISCUSS** | Amber | Open-ended design conversation. Mechanics, lore, design theory. Not code-focused |
 | **IMPLEMENT** | Blue | Writes code. Includes GDD context and current phase. Auto-checkpoint option |
 | **DEBUG** | Orange | Root cause analysis with minimal collateral changes. Paste screenshots directly |
-| **RESEARCH** | Cyan | Persistent knowledge bank. Can search, download, and summarize books via built-in library integration |
+| **RESEARCH** | Cyan | Live web search, book downloads, trending topic synthesis. Persistent knowledge bank. SETUP RESEARCH onboards tools, WEB SEARCH pulls live data, TRENDING checks game dev community |
 | **QA** | Purple | Systematic testing audit with severity ratings (Blocking/Annoying/Cosmetic). Reports issues, doesn't fix them |
 | **FREEFORM** | Gray | No guardrails. Think out loud about anything project-related |
 | **MARKETING** | Gold | Store listings, devlogs, social posts. Built-in anti-AI-voice filter makes output sound human |
@@ -226,6 +226,19 @@ Works with Claude Code (recommended), Aider, OpenAI Codex CLI, and Google Gemini
 - **No telemetry** — All config stored locally
 - **Windows 10/11** (macOS/Linux possible on demand)
 - **Requires:** Claude Code (or alternative CLI) installed and authenticated
+
+---
+
+## Roadmap (Active Development)
+
+Upcoming features (no dates committed):
+
+- **MOD Mode** — Build mods for Skyrim, Minecraft, Factorio, Rimworld, and other games
+- **Git Personalization Panel** — Connect GitHub, create repos, manage branches from inside DevForge
+- **Autonomous Terminal Jobs** — Set a worktree tab to a mode and goal, let it work autonomously with time caps
+- **Playtest Asset Generation** — Auto-generate wargame counter sheets, hex maps, placeholder tilesets for prototyping
+- **Model Selection & Smart Routing** — Pick Opus/Sonnet/Haiku per task, or let DevForge auto-route
+- **LENS Mode** — Editorial and sensitivity review for game content and reception
 
 ---
 

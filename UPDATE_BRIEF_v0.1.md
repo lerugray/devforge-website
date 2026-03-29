@@ -100,6 +100,35 @@
 
 ---
 
+## v0.1.1 Changes (2026-03-29)
+
+### Research Tool Onboarding
+- **SETUP RESEARCH** quick action in Research mode — checks what research tools are installed and walks the user through setting up missing ones
+- **WEB SEARCH** quick action — makes it explicit that Research mode can search live web data (with tools installed)
+- **TRENDING** quick action — checks what the game dev community is currently discussing
+- Research mode system prompt now guides Claude to use web tools when available, and suggests SETUP RESEARCH if they're not
+- Recommended tools listed in help modal: Agent-Reach (web/YouTube/Reddit/Twitter), Last30Days (trending synthesis), bookfinder-general (books)
+
+### Why This Matters for the Website
+Research mode is now a clearer value proposition: "not just AI answering from memory — it searches the web, reads books, and checks what's trending." This is worth calling out on the landing page.
+
+---
+
+## Roadmap (Show Active Development)
+
+A full ROADMAP.md is included in this folder. Key upcoming features to highlight on the website:
+
+1. **MOD Mode** — build mods for Skyrim, Minecraft, Factorio, and other games. Expands the audience from "making games" to "modifying games"
+2. **Git Personalization** — connect GitHub, create repos, manage branches from inside Devforge. No terminal required
+3. **Autonomous Terminal Jobs** — set a tab to a mode and goal, let it work autonomously with time-based usage caps
+4. **Playtest Asset Generation** — auto-generate wargame counter sheets, hex maps, placeholder tilesets for prototyping
+5. **Model Selection & Smart Routing** — pick Opus/Sonnet/Haiku per task, or let Devforge auto-route based on mode and complexity
+6. **LENS Mode** — editorial/sensitivity review for your game's content and reception
+
+Consider adding a "What's Next" or "Roadmap" section to the landing page. Shows the product is actively developed and has a clear direction. Don't promise dates — just show the direction.
+
+---
+
 ## What NOT to Change
 
 - Core positioning (GDD-first, mode-based discipline, git safety)
