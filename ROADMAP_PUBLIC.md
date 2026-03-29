@@ -35,6 +35,9 @@ iOS, Android, and cross-platform mobile support. Touch input patterns, screen sc
 ### Git Made Simple
 Connect your GitHub account, create repos, manage branches — all from inside Devforge. No terminal commands needed.
 
+### PACKAGE Mode
+Build and package your game for distribution. Stack-aware — knows the right build commands for your platform. Quick actions for itch.io, Steam, app stores, and mod workshops. Completes the full workflow: FORGE your idea → IMPLEMENT it → TEST it → PACKAGE it for release.
+
 ### Model Picker
 Choose between Claude Opus (best quality), Sonnet (balanced), or Haiku (fast and cheap) per task. Use the right model for the job instead of burning premium tokens on simple questions.
 
