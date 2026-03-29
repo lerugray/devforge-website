@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevForge — Game Development Environment</title>
-    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 14 specialized modes. One-click undo. $9 early access. Windows, Mac and Linux coming.">
+    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 16 specialized modes. One-click undo. $9 early access. Windows, Mac and Linux coming.">
     <meta property="og:title" content="DevForge — Game Development Environment">
-    <meta property="og:description" content="A desktop game dev environment that keeps your GDD loaded. 14 specialized modes. One-click undo. $9 early access.">
+    <meta property="og:description" content="A desktop game dev environment that keeps your GDD loaded. 16 specialized modes. One-click undo. $9 early access.">
     <meta property="og:image" content="https://usedevforge.com/assets/images/og-image.png">
     <meta property="og:url" content="https://usedevforge.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DevForge — Game Development Environment">
-    <meta name="twitter:description" content="A desktop game dev environment that keeps your GDD loaded. 14 specialized modes. One-click undo. $9 early access.">
+    <meta name="twitter:description" content="A desktop game dev environment that keeps your GDD loaded. 16 specialized modes. One-click undo. $9 early access.">
     <meta name="twitter:image" content="https://usedevforge.com/assets/images/og-image.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="assets/images/favicon-32.png" sizes="32x32">
@@ -115,10 +115,10 @@
                     <div class="terminal-block glow-amber">
                         <div class="block-header">
                             <span class="prompt-char" aria-hidden="true">&gt;</span>
-                            <h3 style="color: var(--amber);">14 Modes, 14 Jobs</h3>
+                            <h3 style="color: var(--amber);">16 Modes, 16 Jobs</h3>
                         </div>
                         <p class="block-body">
-                            DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. Each mode gives Claude one job and the right context for it.
+                            DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. MOD builds mods. PACKAGE handles distribution. Each mode locks Claude to one job.
                         </p>
                     </div>
 
@@ -191,7 +191,7 @@
 
             <!-- Modes -->
             <section class="modes-section" aria-labelledby="modes-heading">
-                <h2 id="modes-heading">14 modes. One job each.</h2>
+                <h2 id="modes-heading">16 modes. One job each.</h2>
                 <ul class="modes-grid">
                     <li><button class="mode-cell" style="color: var(--text-primary);" data-mode="forge">Forge</button></li>
                     <li><button class="mode-cell" style="color: var(--green);" data-mode="gdd">GDD</button></li>
@@ -207,6 +207,8 @@
                     <li><button class="mode-cell" style="color: var(--lime);" data-mode="test">Test</button></li>
                     <li><button class="mode-cell" style="color: var(--crimson);" data-mode="security">Security</button></li>
                     <li><button class="mode-cell" style="color: var(--pink);" data-mode="uiux">UI/UX</button></li>
+                    <li><button class="mode-cell" style="color: var(--orange);" data-mode="mod">Mod</button></li>
+                    <li><button class="mode-cell" style="color: var(--purple);" data-mode="package">Package</button></li>
                 </ul>
                 <div class="character-parade" aria-hidden="true">
                     <span class="sprite-anim"><img src="assets/images/sprites/characters/knight_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/knight_idle_d_2.png" alt=""></span>
@@ -223,6 +225,12 @@
                     <span class="sprite-anim"><img src="assets/images/sprites/characters/pirate_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/pirate_idle_d_2.png" alt=""></span>
                     <span class="sprite-anim"><img src="assets/images/sprites/characters/monk_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/monk_idle_d_2.png" alt=""></span>
                     <span class="sprite-anim"><img src="assets/images/sprites/characters/elf_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/elf_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/barbarian_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/barbarian_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/dwarf_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/dwarf_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/healer_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/healer_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/king_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/king_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/sage_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/sage_idle_d_2.png" alt=""></span>
+                    <span class="sprite-anim"><img src="assets/images/sprites/characters/queen_idle_d_1.png" alt=""><img src="assets/images/sprites/characters/queen_idle_d_2.png" alt=""></span>
                 </div>
             </section>
 
@@ -299,15 +307,15 @@
 
             <!-- Skills -->
             <section class="info-section" aria-labelledby="skills-heading">
-                <h2 id="skills-heading">47 skills. Injected when relevant.</h2>
-                <p><strong>33 digital:</strong> Roguelike architecture, platformer mechanics, state machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, animation, audio, particles, shaders, OWASP security auditing, WCAG accessibility, visual diagrams &amp; charts, plus stack-specific patterns for all 16 platforms.</p>
-                <p><strong>14 analog:</strong> Rules writing, component design, balance &amp; probability, hex maps, area movement, point-to-point maps, solitaire bot systems, wargame scale, VASSAL modules, Tabletop Simulator mods, print &amp; play layout, Nandeck card layout.</p>
+                <h2 id="skills-heading">49 skills. Injected when relevant.</h2>
+                <p><strong>36 digital:</strong> Roguelike architecture, platformer mechanics, state machines, collision detection, camera systems, pathfinding, dialogue trees, save/load, inventory, animation, audio, particles, shaders, OWASP security auditing, WCAG accessibility, visual diagrams &amp; charts, plus stack-specific patterns for all 19 platforms.</p>
+                <p><strong>13 tabletop:</strong> Rules writing, component design, balance &amp; probability, hex maps, area movement, point-to-point maps, solitaire bot systems, wargame scale, VASSAL modules, Tabletop Simulator mods, print &amp; play layout, Nandeck card layout.</p>
             </section>
 
             <!-- Stacks -->
             <section class="info-section" aria-labelledby="stacks-heading">
-                <h2 id="stacks-heading">16 platforms.</h2>
-                <p>Godot 4, Unity, Unreal, Rust, Python, Love2D, GameMaker, RPG Maker, Phaser 3, HTML5, PICO-8, GB Studio, NES, Game Boy, Genesis, GBA. Plus a stack-agnostic "Undecided" option where FORGE recommends the right platform after learning your game. DevForge injects stack-specific build commands, docs links, and coding conventions into your prompts.</p>
+                <h2 id="stacks-heading">19 platforms.</h2>
+                <p>Godot 4, Unity, Unreal, Rust, Python, Love2D, GameMaker, RPG Maker, Phaser 3, HTML5, PICO-8, GB Studio, NES, Game Boy, Genesis, GBA, Ikemen GO/MUGEN, iOS, Android. There's also an "Undecided" option — FORGE asks about your game and recommends the right stack. DevForge injects stack-specific build commands, docs, and coding conventions into every prompt.</p>
             </section>
 
             <!-- Providers -->
@@ -342,33 +350,24 @@
                     <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average. Powered by ccusage.</li>
                     <li><strong>CLI Resilience</strong> DevForge detects your provider's CLI version at startup. If an update introduces breaking changes, you get a warning in the log panel instead of silent failures.</li>
                     <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
-                    <li><strong>Oryx Sprites + SFX</strong> 14 pixel art characters with idle, running, success, and error animations. 8-bit sound effects. All toggleable.</li>
+                    <li><strong>Oryx Sprites + SFX</strong> 43 pixel art characters with idle, running, success, and error animations, plus 6 boss sprites for milestone events. 8-bit sound effects. All toggleable.</li>
                 </ul>
             </section>
 
             <!-- Roadmap -->
             <section class="info-section" aria-labelledby="roadmap-heading">
                 <h2 id="roadmap-heading">What's next.</h2>
-                <h3 style="color: var(--green); margin-bottom: var(--space-12);">v0.2</h3>
+                <h3 style="color: var(--amber); margin-bottom: var(--space-12);">v0.3</h3>
                 <ul class="detail-list">
-                    <li><strong>MOD Mode</strong> Build mods for Skyrim, Minecraft, Factorio, Rimworld. Same structured workflow. FORGE a concept, IMPLEMENT it, TEST it, PACKAGE it for the workshop.</li>
-                    <li><strong>Fighting Games</strong> Ikemen GO / MUGEN character creation. Sprite definitions, hitbox patterns, frame data, combo design. Works with the existing MUGEN content library.</li>
-                    <li><strong>Mobile Dev</strong> iOS, Android, and cross-platform support. Touch input patterns, screen scaling, app store guidelines, performance optimization.</li>
-                    <li><strong>Git Panel</strong> Connect GitHub, create repos, manage branches from inside DevForge. No terminal required.</li>
-                    <li><strong>PACKAGE Mode</strong> Build and package your game for distribution. Stack-aware build commands for itch.io, Steam, app stores, and mod workshops.</li>
-                    <li><strong>Model Picker</strong> Choose Opus (best quality), Sonnet (balanced), or Haiku (fast and cheap) per task.</li>
-                </ul>
-                <h3 style="color: var(--amber); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.3</h3>
-                <ul class="detail-list">
-                    <li><strong>LENS Mode</strong> Editorial review for your game's content. Flags representation issues, content ratings, and regional sensitivity before your players find them.</li>
-                    <li><strong>MCP Server</strong> Use DevForge's modes, skills, and context system from inside VS Code, Cursor, or raw Claude Code.</li>
-                    <li><strong>Remote Dispatch</strong> Message a Telegram or Discord bot from your phone to trigger tasks on your home machine. Queue work while you're away.</li>
-                    <li><strong>Autonomous Workers</strong> Set a terminal tab to a mode and a goal. Let it work through tasks on its own with a time budget you control.</li>
-                    <li><strong>Playtest Assets</strong> Auto-generate wargame counter sheets, hex maps, placeholder tilesets, and card layouts for prototyping.</li>
+                    <li><strong>LENS Mode</strong> Editorial review for your game's content. Flags representation issues, content ratings, and regional sensitivity before your players find them. PITCH finds design flaws. LENS finds blind spots.</li>
+                    <li><strong>DevForge MCP Server</strong> Use DevForge's modes, skills, and context system from inside VS Code, Cursor, or raw Claude Code. For developers who live in their editor and don't want to leave it.</li>
+                    <li><strong>Remote Dispatch</strong> Message a Telegram or Discord bot from your phone to trigger tasks on your home machine. Queue work while you're away, get results when you're back.</li>
+                    <li><strong>Smart Model Routing</strong> Auto-route tasks to the right model based on mode and complexity. Opus for implementation, Sonnet for analysis, Haiku for quick tasks.</li>
                 </ul>
                 <h3 style="color: var(--purple); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.4</h3>
                 <ul class="detail-list">
-                    <li><strong>Sprite Visualizer</strong> Pixel characters "work" on your code in an animated forge scene. Reading a file opens a book. Running tests pulls a lever. Activity feed drives the animation.</li>
+                    <li><strong>Sprite Visualizer</strong> Reading a file opens a book. Running tests pulls a lever. Activity feed drives the animation — pixel characters act out what Claude is doing in real time.</li>
+                    <li><strong>ASK Bot Enhancements</strong> Selectable portrait, pop-out as a floating window, portrait reactions to conversation state.</li>
                 </ul>
             </section>
 
@@ -466,6 +465,14 @@
             uiux: {
                 name: "UI/UX",
                 desc: "WCAG audit, layout review, contrast checking, user flow analysis, responsive audit, accessibility tree inspection. Has an analog override for component usability testing."
+            },
+            mod: {
+                name: "MOD",
+                desc: "Build mods for Skyrim, Minecraft, Factorio, RimWorld, Stardew Valley, and BepInEx/Unity games. Same workflow as any project: FORGE a concept, IMPLEMENT it, TEST it, PACKAGE it for the workshop."
+            },
+            package: {
+                name: "PACKAGE",
+                desc: "Stack-aware build and distribution. Knows the right commands and file structure for itch.io uploads, Steam depots, iOS and Android app stores, mod workshop submissions, and retro ROM packaging."
             }
         };
 
