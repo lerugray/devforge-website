@@ -34,19 +34,35 @@
 
 ---
 
-## Coming in v0.3
+## Coming in v0.3 — Smarter Routing, Cost Control & Visibility
 
 ### Smart Model Routing
 Devforge picks the right model for the job automatically. Opus for planning and deep analysis, Sonnet for implementation, Haiku for quick lookups. On by default. Override any time. Complexity-aware: big projects get upgraded automatically.
 
-### Remote Dispatch (Telegram & Discord)
-Message Devforge from your phone. Send tasks to a terminal tab or ask the free ASK bot what Claude is doing. Bot confirms before expensive work, respects your daily budget. Send and receive screenshots, concept art, and asset previews. Works with voice messages too.
+### Usage Alerts & Burn Rate Monitoring
+Set budget thresholds. Get notified at 50%, 75%, 90% of your daily spend. Live burn rate tracking catches runaway tasks. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.
+
+### Smarter Autonomous Tabs
+Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become actual multi-step workflows instead of single prompts. Progress reports after each step.
+
+### ASK Bot Upgrade
+Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation. Non-programmers get a persistent, friendly guide visible at all times.
 
 ### LENS Mode
 Editorial review for your game's content. Flags representation issues, content rating implications, and regional sensitivity before your players find them. PITCH stress-tests your design. LENS stress-tests your perception.
 
 ### More Languages in Code Browser
-Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly, and MAME added. Every stack's primary language works in the built-in code viewer.
+Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added. Every stack's primary language works in the built-in code viewer.
+
+### Native System Notifications
+Task completion notifications that work when Devforge is minimized. System tray alerts, taskbar progress bar.
+
+### Anonymous Usage Insights
+Opt-in, transparent, no personal data collected. Help us understand which features you use and where you hit friction. You can view exactly what gets sent before opting in. Off by default.
+
+---
+
+## v0.4 — Content Depth & Project Visualization
 
 ### Full Skill & Research Audit
 Research sweep across all 20 stacks to fill gaps and validate coverage. Includes:
@@ -58,53 +74,44 @@ Research sweep across all 20 stacks to fill gaps and validate coverage. Includes
 ### MOD Mode Expansion
 Strategy and simulation game modding (Dominions 6, Conquest of Elysium 5, Aurora 4X, Dwarf Fortress). ROM hacking for classic consoles (Super Mario World, Zelda, Sonic, Pokemon). Arcade ROM modding via MAME.
 
-### Usage Alerts & Burn Rate Monitoring
-Set budget thresholds. Get notified at 50%, 75%, 90% of your daily spend. Live burn rate tracking catches runaway tasks. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.
-
 ### Pen & Paper RPG Design
 Full tabletop RPG design support in analog mode. Dice system design, character creation frameworks, class/archetype building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.
-
-### Localization & Translation
-Translate your game for regional distribution. Extract strings, translate to any language, generate locale files in the right format for your stack. Syncs translations when source text changes. Lives in PACKAGE mode because localization is part of shipping.
 
 ### Art Asset Pipeline
 Free, browser-based art generation. Nano Banana generates base sprites, Grok animates them as video loops, SpriteMaster converts video to sprite sheets. Devforge orchestrates the pipeline with your project context. ComfyUI as a local alternative for offline work.
 
-### Native System Notifications
-Task completion notifications that work when Devforge is minimized. System tray alerts, taskbar progress bar, and Telegram/Discord pings when you're away from the machine.
-
-### Devforge MCP Server
-Use Devforge's modes, skills, and context system from inside VS Code, Cursor, or raw Claude Code. Free and open source. Built last so it includes everything from v0.3.
+### Obsidian Vault Export
+One-click export of your project's GDD, session notes, transcripts, research, and task lists into a linked Obsidian wiki. Graph view turns your project history into a visual knowledge map. Works with any markdown wiki tool.
 
 ---
 
-## v0.4 and Beyond
+## v0.5 — Ship & Share
 
-### ASK Bot Enhancements
-Selectable portrait, pop-out as a floating window, portrait reactions to conversation.
+### Localization & Translation
+Translate your game for regional distribution. Extract strings, translate to any language, generate locale files in the right format for your stack. Syncs translations when source text changes. Lives in PACKAGE mode because localization is part of shipping.
 
-### Sprite Visualizer
-Watch pixel characters "work" on your code in an animated forge scene. Activity feed drives sprite behavior. Reading a file makes a character open a book, running tests pulls a lever.
+### Devforge MCP Server
+Use Devforge's modes, skills, and context system from inside VS Code, Cursor, or raw Claude Code. Free and open source.
 
-### Remote Visualizer
-Stream the sprite visualizer to your phone. Watch your workers from the couch.
+### Remote Dispatch (Telegram)
+Message Devforge from your phone. Send tasks to a terminal tab or ask the free ASK bot what Claude is doing. Bot confirms before expensive work, respects your daily budget. Send and receive screenshots and concept art.
 
-### Devforge Companion App
-Native iOS/Android app. Remote dispatch, ASK bot, usage monitoring, task progress, and visualizer stream in one place.
+---
 
-### Voice Input
-Speak prompts instead of typing. Mic button next to BUILD & SEND. Works with Telegram and Discord voice messages too.
+## Idea Bank
 
-### Can It Run Doom?
-Yes.
+- **Sprite Visualizer** Watch pixel characters "work" on your code. Activity feed drives sprite behavior.
+- **Companion App** Native iOS/Android app for remote dispatch, ASK bot, and usage monitoring.
+- **Voice Input** Speak prompts instead of typing. Mic button next to BUILD & SEND.
+- **Can It Run Doom?** Yes.
 
 ---
 
 ## How to Present This on the Website
 
-- v0.3 is a major release. Lead with smart model routing and remote dispatch as headlines
-- The art pipeline and RPG support are the most shareable items
+- v0.3 leads with smart model routing and the ASK bot upgrade as headlines
+- Usage alerts and "Devforge saved you $47 this month" (Ollama savings) is a concrete selling point
+- v0.4's art pipeline and RPG support are the most shareable items
 - Multiplayer infrastructure is the broadest audience expansion
-- "Devforge saved you $47 this month" (Ollama savings) is a concrete selling point worth highlighting
 - The MCP server being free and open source shows confidence in the product
 - Keep the tone direct. "Coming soon" not "we're excited to announce"
