@@ -6,16 +6,18 @@
 
 ---
 
-## What's Live (v0.2.1)
+## What's Live (v0.2.2)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
 - 20 supported platforms (Godot GDScript, Godot C#, Unity, Unreal, Rust, Python, Ikemen GO/MUGEN, iOS, Android, and 11 more including retro consoles)
 - Godot 4 C# stack with dedicated GodotSharp skill covering source generators, signals, exports, memory management, and Unity migration patterns
+- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with long prompt handling on Windows
 - Edit project settings, path validation, last-used project auto-load
 - Resizable prompt bar and failed prompt recovery
 - Manage learned rules (edit and delete from RULES modal)
 - Ollama CORS proxy (no environment variables needed) and auto-reconnect
+- Automated test suite (Rust backend + JS smoke tests)
 - MOD mode for modding Skyrim, Minecraft, Factorio, RimWorld, Stardew Valley, and BepInEx/Unity games
 - PACKAGE mode for stack-aware build and distribution. itch.io, Steam, app stores, mod workshops, retro ROMs
 - Fighting game support (Ikemen GO / MUGEN) with character creation, state machines, hitbox patterns, and frame data
