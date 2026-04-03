@@ -6,13 +6,14 @@
 
 ---
 
-## What's Live (v0.2.2)
+## What's Live (v0.2.4)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
 - 20 supported platforms (Godot GDScript, Godot C#, Unity, Unreal, Rust, Python, Ikemen GO/MUGEN, iOS, Android, and 11 more including retro consoles)
 - Godot 4 C# stack with dedicated GodotSharp skill covering source generators, signals, exports, memory management, and Unity migration patterns
-- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with long prompt handling on Windows
+- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with reliable Windows delivery and real-time streaming output
+- Gemini CLI runs with full activity feed, session resume, and auto-approval — same experience as Claude Code
 - Edit project settings, path validation, last-used project auto-load
 - Resizable prompt bar and failed prompt recovery
 - Manage learned rules (edit and delete from RULES modal)
@@ -56,6 +57,9 @@ Editorial review for your game's content. Flags representation issues, content r
 ### More Languages in Code Browser
 Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added. Every stack's primary language works in the built-in code viewer.
 
+### Stack-Aware Test Automation
+TEST mode becomes a full automated testing hub. Devforge picks the right test framework for your stack and generates a test suite. Run tests from a button, see pass/fail results in the activity feed, and failed tests auto-route to Debug mode with context pre-filled. Config validation for stacks where you can't run the game directly: file consistency checks for Ikemen GO characters, mod structure validation, ROM header checks. Works across all 20 platforms.
+
 ### Native System Notifications
 Task completion notifications that work when Devforge is minimized. System tray alerts, taskbar progress bar.
 
@@ -72,9 +76,10 @@ Research sweep across all 20 stacks to fill gaps and validate coverage. Includes
 - 3D game dev tooling (Blender pipelines, shaders, rigging, LOD, navmesh)
 - Pen & paper RPG systems and open SRDs
 - Per-stack community research to find what developers actually struggle with
+- Curated open source tool and engine catalog integrated into quick links across all modes
 
 ### MOD Mode Expansion
-Strategy and simulation game modding (Dominions 6, Conquest of Elysium 5, Aurora 4X, Dwarf Fortress). ROM hacking for classic consoles (Super Mario World, Zelda, Sonic, Pokemon). Arcade ROM modding via MAME.
+Open source game modding: Doom, Quake, Diablo, Duke Nukem 3D, and more — games with public source code and active modding communities. Source repos and community links built in. Strategy and simulation game modding (Dominions 6, Conquest of Elysium 5, Aurora 4X, Dwarf Fortress). ROM hacking for classic consoles (Super Mario World, Zelda, Sonic, Pokemon). Arcade ROM modding via MAME.
 
 ### Pen & Paper RPG Design
 Full tabletop RPG design support in analog mode. Dice system design, character creation frameworks, class/archetype building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.
@@ -111,7 +116,8 @@ Message Devforge from your phone. Send tasks to a terminal tab or ask the free A
 
 ## How to Present This on the Website
 
-- v0.3 leads with smart model routing and the ASK bot upgrade as headlines
+- v0.3 leads with smart model routing, test automation, and the ASK bot upgrade as headlines
+- Stack-aware test automation is a strong differentiator — no other tool generates tests that know your game engine
 - Usage alerts and "Devforge saved you $47 this month" (Ollama savings) is a concrete selling point
 - v0.4's art pipeline and RPG support are the most shareable items
 - Multiplayer infrastructure is the broadest audience expansion
