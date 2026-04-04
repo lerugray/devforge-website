@@ -6,7 +6,7 @@
 
 ---
 
-## What's Live (v0.2.5)
+## What's Live (v0.2.7)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
@@ -31,9 +31,12 @@
 - Live research with web search, book search, and trending topic tools
 - Transcript browser. Browse, view, and reference your full conversation history
 - Auto-complexity indicator that reads your project's actual size
-- Activity feed showing what Claude is doing in real time
+- Activity feed showing what Claude is doing in real time (clears properly between projects, CLEAR button works)
 - Dynamic learning system. Claude gets smarter about your project over time
 - Full accessibility audit (WCAG AA compliant)
+- Clean terminal output: Node.js deprecation warnings and other CLI noise suppressed
+- Gemini CLI works with large prompts on Windows (no more "command line too long" errors)
+- Missing provider detection: clear install instructions when a CLI isn't found
 
 ---
 
