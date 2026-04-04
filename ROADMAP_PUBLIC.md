@@ -6,13 +6,13 @@
 
 ---
 
-## What's Live (v0.2.4)
+## What's Live (v0.2.5)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
 - 20 supported platforms (Godot GDScript, Godot C#, Unity, Unreal, Rust, Python, Ikemen GO/MUGEN, iOS, Android, and 11 more including retro consoles)
 - Godot 4 C# stack with dedicated GodotSharp skill covering source generators, signals, exports, memory management, and Unity migration patterns
-- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with reliable Windows delivery and real-time streaming output
+- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with reliable file detection and real-time streaming on all providers
 - Gemini CLI runs with full activity feed, session resume, and auto-approval — same experience as Claude Code
 - Edit project settings, path validation, last-used project auto-load
 - Resizable prompt bar and failed prompt recovery
