@@ -6,7 +6,7 @@
 
 ---
 
-## What's Live (v0.2.8)
+## What's Live (v0.2.9)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
@@ -35,9 +35,11 @@
 - Dynamic learning system. Claude gets smarter about your project over time
 - Full accessibility audit (WCAG AA compliant)
 - Clean terminal output: Node.js deprecation warnings and other CLI noise suppressed
-- Gemini CLI works with large prompts on Windows (no more "command line too long" errors)
+- Gemini CLI works with prompts of any size on Windows (piped via stdin, no command line limits)
 - Missing provider detection: clear install instructions when a CLI isn't found
 - Reliable CLI path resolution across all Node.js setups (nvm, volta, standard npm)
+- Forge mode respects "ask me questions" — won't generate files until you say go
+- Clean terminal output: Gemini console noise, Node.js warnings, and other CLI artifacts suppressed
 
 ---
 
