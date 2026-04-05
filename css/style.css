@@ -26,7 +26,7 @@
   --bg-inset: #D3D3D6;
   --bg-surface: #C8C7CC;
 
-  --green: #336533;
+  --green: #2d5a2d;
   --amber: #725721;
   --blue: #405b87;
   --red: #8c4747;
@@ -35,11 +35,11 @@
   --teal: #245f43;
   --orange: #7a3d1a;
   --gold: #6a5218;
-  --lime: #44712b;
+  --lime: #376023;
   --crimson: #7a2040;
   --pink: #7a3060;
 
-  --border: #9A99A0;
+  --border: #6E6D73;
   --border-light: #8B8A8D;
 
   --text-primary: #2D2B3D;
@@ -85,11 +85,16 @@ img {
 
 a {
   color: var(--green);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.btn-buy,
+.skip-link {
+  text-decoration: none;
 }
 
 /* --- Skip Link --- */
@@ -97,7 +102,7 @@ a:hover {
   position: absolute;
   top: -100px;
   left: var(--space-16);
-  background: var(--bg-surface);
+  background: var(--bg-base);
   color: var(--amber);
   font-family: var(--font-pixel);
   font-size: 9px;
@@ -492,6 +497,13 @@ p:last-child {
   text-decoration: none;
 }
 
+.btn-buy--hero {
+  display: inline-block;
+  margin-top: var(--space-16);
+  font-size: 9px;
+  padding: var(--space-8) var(--space-24);
+}
+
 .buy-section .buy-note {
   margin-top: var(--space-16);
   font-size: 11px;
@@ -570,6 +582,14 @@ p:last-child {
   font-size: 8px;
   color: var(--text-dim);
   letter-spacing: 1px;
+}
+
+.site-footer .footer-also {
+  margin-top: var(--space-8);
+}
+
+.site-footer .footer-also a {
+  color: var(--purple);
 }
 
 /* --- Modal --- */
@@ -794,6 +814,7 @@ p:last-child {
 .terminal-block.glow-cyan { border-left: 2px solid var(--cyan); }
 .terminal-block.glow-purple { border-left: 2px solid var(--purple); }
 .terminal-block.glow-orange { border-left: 2px solid var(--orange); }
+.terminal-block.glow-teal { border-left: 2px solid var(--teal); }
 
 /* --- Responsive (mobile) --- */
 @media (max-width: 640px) {

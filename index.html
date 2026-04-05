@@ -35,7 +35,8 @@
                 <p class="subtext">
                     Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.
                 </p>
-                <p class="price-line">v0.2.5 live &middot; $9 early access &middot; No subscription &middot; Windows (Mac &amp; Linux coming)</p>
+                <p class="price-line">v0.3.0 live &middot; $9 early access &middot; No subscription &middot; Windows (Mac &amp; Linux coming)</p>
+                <a href="https://conflict-simulations-llc.itch.io/devforge" class="btn-buy btn-buy--hero">Buy on Itch.io // $9</a>
             </section>
 
             <!-- Dungeon Scene Banner -->
@@ -159,6 +160,16 @@
                         </div>
                         <p class="block-body">
                             A live activity feed shows every file read, edit, and bash command. Toggle the thinking display to see Claude's reasoning. Press Escape to stop mid-execution.
+                        </p>
+                    </div>
+
+                    <div class="terminal-block glow-teal">
+                        <div class="block-header">
+                            <span class="prompt-char" aria-hidden="true">&gt;</span>
+                            <h3 style="color: var(--teal);">Smart Model Routing</h3>
+                        </div>
+                        <p class="block-body">
+                            DevForge picks the right Claude model per task. Opus for architecture and debugging. Sonnet for implementation. Haiku for quick lookups. Saves subscription time on simple tasks, uses full power when it matters. Toggle it off and pick manually.
                         </p>
                     </div>
                 </div>
@@ -320,10 +331,12 @@
 
             <!-- Providers -->
             <section class="info-section" aria-labelledby="providers-heading">
-                <h2 id="providers-heading">Built for Claude Code. Open to others.</h2>
-                <p>Claude Code is the tested, recommended provider. You get session resume, streaming JSON output, direct file editing, context window tracking, and cost reporting. DevForge detects your CLI version at startup and warns you if an update changes something.</p>
-                <p>Gemini CLI runs with full activity feed, session resume, and auto-approval. Real-time streaming output, same experience as Claude Code. Use Google AI Studio's free tier to get started with no credit card.</p>
-                <p>Aider and Codex CLI are configured and the architecture supports them, but they haven't been tested in real workflows yet. For providers without session memory, DevForge injects heavier context: session notes, conversation log, GDD sections, code map.</p>
+                <h2 id="providers-heading">4 providers. Auto-detected at startup.</h2>
+                <p>DevForge checks which CLIs are installed when you launch it. Green dot means ready. Red dot means missing, with install instructions right there. No digging through docs.</p>
+                <p><strong>Claude Code</strong> ($20-200/mo) is the tested, recommended provider. Session resume, streaming output, direct file editing, context tracking, cost reporting. Smart model routing picks Opus, Sonnet, or Haiku per task.</p>
+                <p><strong>Gemini CLI</strong> (free) runs with full activity feed, session resume, and auto-approval. Same experience as Claude Code. Use Google AI Studio's free tier to get started with no credit card.</p>
+                <p><strong>Aider</strong> (bring your own key) and <strong>Codex CLI</strong> (OpenAI credits) are configured and the architecture supports them. For providers without session memory, DevForge injects heavier context: session notes, conversation log, GDD sections, code map.</p>
+                <p>A built-in PROVIDERS help tab covers install commands, authentication, costs, and troubleshooting for every provider. Switch providers and get a connection test confirming it works.</p>
                 <p class="callout-text">Looking for testers willing to try DevForge with Aider or Codex and report back. Free access for multi-provider testers.</p>
             </section>
 
@@ -349,6 +362,7 @@
                     <li><strong>Cost Tracking</strong> Footer shows "WORK DONE: $X.XX" with color-coded daily spend. Per-project totals so you see which games get the most AI investment. DevForge tracks usage against your existing AI subscription. No separate billing.</li>
                     <li><strong>/CONTEXT</strong> Live session state: model, CLI version, context window usage bar (color-coded), token breakdown including cache hits, session cost.</li>
                     <li><strong>/USAGE</strong> Today's and last 7 days' cost, tokens, sessions, daily average. Powered by ccusage.</li>
+                    <li><strong>243 Automated Tests</strong> Provider spawning, argument safety, dual-path consistency, security encoding. 9 patches from external tester feedback.</li>
                     <li><strong>CLI Resilience</strong> DevForge detects your provider's CLI version at startup. If an update introduces breaking changes, you get a warning in the log panel instead of silent failures.</li>
                     <li><strong>Two Themes</strong> CRT Dark (retro terminal) and SNES Light (Super Nintendo palette).</li>
                     <li><strong>Oryx Sprites + SFX</strong> 43 pixel art characters with idle, running, success, and error animations, plus 6 boss sprites for milestone events. 8-bit sound effects. All toggleable.</li>
@@ -358,31 +372,31 @@
             <!-- Roadmap -->
             <section class="info-section" aria-labelledby="roadmap-heading">
                 <h2 id="roadmap-heading">What's next.</h2>
-                <h3 style="color: var(--amber); margin-bottom: var(--space-12);">v0.3 — Smarter Routing, Cost Control &amp; Visibility</h3>
+                <h3 style="color: var(--amber); margin-bottom: var(--space-12);">Coming Next — Cost Control &amp; Visibility</h3>
                 <ul class="detail-list">
-                    <li><strong>Smart Model Routing</strong> DevForge picks the right model for the job. Opus for planning and deep analysis, Sonnet for implementation, Haiku for quick lookups. On by default, override any time. Large projects get upgraded when the complexity indicator trips.</li>
-                    <li><strong>Usage Alerts &amp; Burn Rate</strong> Set budget thresholds. Get notified at 50%, 75%, and 90% of your daily spend. DevForge pauses autonomous tabs when spend accelerates. See exactly how much Ollama saved you in concrete dollar amounts.</li>
-                    <li><strong>Smarter Autonomous Tabs</strong> Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become actual multi-step workflows instead of single prompts. Progress reports after each step.</li>
-                    <li><strong>ASK Bot Upgrade</strong> Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation. Non-programmers get a persistent, friendly guide visible at all times.</li>
-                    <li><strong>LENS Mode</strong> Editorial review for your game's content. Flags representation issues, content rating implications, and regional sensitivity before your players find them. PITCH finds design flaws. LENS finds blind spots.</li>
-                    <li><strong>Code Browser Language Expansion</strong> Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added.</li>
+                    <li><strong>Usage Alerts &amp; Burn Rate</strong> Set budget thresholds. Get notified at 50%, 75%, and 90% of your daily spend. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.</li>
+                    <li><strong>Smarter Autonomous Tabs</strong> Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become multi-step workflows instead of single prompts. Progress reports after each step.</li>
+                    <li><strong>ASK Bot Upgrade</strong> Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation.</li>
+                    <li><strong>LENS Mode</strong> Editorial review for your game's content. Flags representation issues, content rating implications, and regional sensitivity before your players find them. PITCH stress-tests your design. LENS stress-tests your perception.</li>
+                    <li><strong>Stack-Aware Test Automation</strong> TEST mode generates test suites using the right framework for your stack. Run from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug with context. Config validation for Ikemen GO characters, mod structures, ROM headers. Works across all 20 platforms.</li>
+                    <li><strong>More Languages in Code Browser</strong> Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added.</li>
                     <li><strong>Native Notifications</strong> Task completion alerts when DevForge is minimized. System tray, taskbar progress bar.</li>
-                    <li><strong>Stack-Aware Test Automation</strong> TEST mode generates test suites using the right framework for your stack. Run tests from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug mode with context. Config validation for non-executable stacks: Ikemen GO character files, mod structures, ROM headers. Works across all 20 platforms.</li>
-                    <li><strong>Anonymous Usage Insights</strong> Opt-in, transparent, no personal data collected. Help us understand which features you use and where you hit friction. You can view exactly what gets sent before opting in. Off by default.</li>
+                    <li><strong>Anonymous Usage Insights</strong> Opt-in, transparent, no personal data. You can view exactly what gets sent before opting in. Off by default.</li>
                 </ul>
-                <h3 style="color: var(--purple); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.4 — Content Depth &amp; Project Visualization</h3>
+                <h3 style="color: var(--purple); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</h3>
                 <ul class="detail-list">
-                    <li><strong>Full Skill &amp; Research Audit</strong> Research sweep across all 20 stacks to fill gaps. Multiplayer infrastructure (traditional, MMO, async patterns). 3D game dev tooling (Blender pipelines, shaders, rigging, LOD, navmesh). Pen &amp; paper RPG systems and open SRDs. Per-stack community research to find what developers actually struggle with. Curated open source tool and engine catalog integrated into quick links across all modes.</li>
-                    <li><strong>MOD Mode Expansion</strong> Open source game modding: Doom, Quake, Diablo, Duke Nukem 3D, and more &mdash; games with public source code and active modding communities. Source repos and community links built in. Strategy and simulation modding (Dominions 6, Conquest of Elysium, Aurora 4X, Dwarf Fortress). ROM hacking for SNES, GBA, and GB. Arcade ROM modding via MAME.</li>
-                    <li><strong>Pen &amp; Paper RPG Design</strong> Tabletop RPG design support in analog mode. Dice system design, class and archetype building, encounter balance, bestiary generation. Draws from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.</li>
-                    <li><strong>Art Asset Pipeline</strong> Free, browser-based art generation. Nano Banana generates base sprites, Grok animates them as video loops, SpriteMaster converts video to sprite sheets. DevForge runs the pipeline with your project context. ComfyUI as a local alternative for offline work.</li>
-                    <li><strong>Obsidian Vault Export</strong> One-click export of your GDD, session notes, transcripts, research, and task lists into a linked Obsidian wiki. Graph view turns your project history into a visual knowledge map. Works with any markdown wiki tool.</li>
+                    <li><strong>Cross-Provider Routing</strong> Route different types of work to different providers. Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types.</li>
+                    <li><strong>Full Skill &amp; Research Audit</strong> Research sweep across all 20 stacks. Multiplayer infrastructure (traditional, MMO, async patterns). 3D game dev tooling (Blender, shaders, rigging, LOD, navmesh). Pen &amp; paper RPG systems and open SRDs. Per-stack community research. Curated open source tool catalog integrated into quick links.</li>
+                    <li><strong>MOD Mode Expansion</strong> Open source game modding: Doom, Quake, Diablo, Duke Nukem 3D. Strategy and simulation modding (Dominions 6, Conquest of Elysium, Aurora 4X, Dwarf Fortress). ROM hacking for SNES, GBA, and GB. Arcade ROM modding via MAME.</li>
+                    <li><strong>Pen &amp; Paper RPG Design</strong> Tabletop RPG design in analog mode. Dice system design, class building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.</li>
+                    <li><strong>Art Asset Pipeline</strong> Free, browser-based art generation. Nano Banana generates base sprites, Grok animates them as video loops, SpriteMaster converts video to sprite sheets. ComfyUI as a local alternative.</li>
+                    <li><strong>Obsidian Vault Export</strong> One-click export of your GDD, session notes, transcripts, research, and task lists into a linked Obsidian wiki. Graph view turns your project history into a visual knowledge map.</li>
                 </ul>
                 <h3 style="color: var(--cyan); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.5 — Ship &amp; Share</h3>
                 <ul class="detail-list">
                     <li><strong>Localization &amp; Translation</strong> Extract strings, translate to any language, generate locale files in the right format for your stack. Syncs translations when source text changes. Lives in PACKAGE mode.</li>
                     <li><strong>DevForge MCP Server</strong> Use DevForge's modes, skills, and context system from inside VS Code, Cursor, or raw Claude Code. Free and open source.</li>
-                    <li><strong>Remote Dispatch</strong> Message DevForge from your phone via Telegram. Send tasks to a terminal tab, ask the ASK bot what Claude is doing. The bot confirms before expensive tasks and respects your daily budget. Send screenshots and concept art.</li>
+                    <li><strong>Remote Dispatch</strong> Message DevForge from your phone via Telegram. Send tasks to a terminal tab, ask the ASK bot what Claude is doing. The bot confirms before expensive tasks and respects your daily budget.</li>
                 </ul>
                 <h3 style="color: var(--text-dim); margin-top: var(--space-24); margin-bottom: var(--space-12);">Idea Bank</h3>
                 <ul class="detail-list">
@@ -415,6 +429,7 @@
 
         <footer class="site-footer">
             <p class="footer-text">DEVFORGE &mdash; 2026</p>
+            <p class="footer-text footer-also">Also: <a href="https://retrogazeai.com" target="_blank" rel="noopener">Retrogaze <span class="sr-only">(opens in new tab)</span></a>, AI pixel art generation</p>
         </footer>
     </div>
 
@@ -430,6 +445,28 @@
     </div>
 
     <script>
+    // Focus trap utility
+    function trapFocus(containerEl) {
+        function handler(e) {
+            if (e.key !== "Tab") return;
+            var focusable = containerEl.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+            if (!focusable.length) return;
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+        containerEl.addEventListener("keydown", handler);
+        return function () { containerEl.removeEventListener("keydown", handler); };
+    }
+
+    var mainContainer = document.querySelector(".container");
+
     (function () {
         var modes = {
             forge: {
@@ -503,6 +540,7 @@
         var descEl = document.getElementById("modal-description");
         var closeBtn = modal.querySelector(".modal-close");
         var trigger = null;
+        var releaseTrap = null;
 
         function openModal(key, btn) {
             var m = modes[key];
@@ -512,11 +550,15 @@
             titleEl.style.color = getComputedStyle(btn).color;
             descEl.textContent = m.desc;
             modal.hidden = false;
+            mainContainer.setAttribute("inert", "");
+            releaseTrap = trapFocus(modal);
             closeBtn.focus();
         }
 
         function closeModal() {
             modal.hidden = true;
+            mainContainer.removeAttribute("inert");
+            if (releaseTrap) { releaseTrap(); releaseTrap = null; }
             if (trigger) trigger.focus();
             trigger = null;
         }
@@ -544,6 +586,7 @@
         var lightboxImg = document.getElementById("lightbox-img");
         var closeBtn = lightbox.querySelector(".lightbox-close");
         var trigger = null;
+        var releaseTrap = null;
 
         document.querySelectorAll(".screenshot-btn").forEach(function (btn) {
             btn.addEventListener("click", function () {
@@ -552,12 +595,16 @@
                 lightboxImg.src = img.src;
                 lightboxImg.alt = img.alt;
                 lightbox.hidden = false;
+                mainContainer.setAttribute("inert", "");
+                releaseTrap = trapFocus(lightbox);
                 closeBtn.focus();
             });
         });
 
         function closeLightbox() {
             lightbox.hidden = true;
+            mainContainer.removeAttribute("inert");
+            if (releaseTrap) { releaseTrap(); releaseTrap = null; }
             lightboxImg.src = "";
             if (trigger) trigger.focus();
             trigger = null;

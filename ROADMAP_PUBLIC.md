@@ -6,19 +6,23 @@
 
 ---
 
-## What's Live (v0.2.9)
+## What's Live (v0.3.0)
 
 - 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
 - 20 supported platforms (Godot GDScript, Godot C#, Unity, Unreal, Rust, Python, Ikemen GO/MUGEN, iOS, Android, and 11 more including retro consoles)
 - Godot 4 C# stack with dedicated GodotSharp skill covering source generators, signals, exports, memory management, and Unity migration patterns
-- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with reliable file detection and real-time streaming on all providers
-- Gemini CLI runs with full activity feed, session resume, and auto-approval — same experience as Claude Code
+- Multi-provider support (Claude Code, Aider, Codex CLI, Gemini CLI) with auto-detection, status indicators, and in-app setup guide
+- Gemini CLI runs with full activity feed, session resume, and auto-approval — same experience as Claude Code. Free with a Google AI Studio API key
+- Auto-model routing picks the right Claude model per task: Opus for architecture, Sonnet for implementation, Haiku for quick questions. Saves subscription time automatically
+- Smart model suggestions show the recommended model for your current mode
+- Provider settings modal shows which CLIs are installed at a glance (green/red status dots)
+- PROVIDERS tab in the help manual with install commands, auth steps, costs, and troubleshooting for every provider
 - Edit project settings, path validation, last-used project auto-load
 - Resizable prompt bar and failed prompt recovery
 - Manage learned rules (edit and delete from RULES modal)
 - Ollama CORS proxy (no environment variables needed) and auto-reconnect
-- Automated test suite (Rust backend + JS smoke tests)
+- 243 automated tests (Rust backend + JS smoke tests with provider reliability regression suite)
 - MOD mode for modding Skyrim, Minecraft, Factorio, RimWorld, Stardew Valley, and BepInEx/Unity games
 - PACKAGE mode for stack-aware build and distribution. itch.io, Steam, app stores, mod workshops, retro ROMs
 - Fighting game support (Ikemen GO / MUGEN) with character creation, state machines, hitbox patterns, and frame data
@@ -31,22 +35,17 @@
 - Live research with web search, book search, and trending topic tools
 - Transcript browser. Browse, view, and reference your full conversation history
 - Auto-complexity indicator that reads your project's actual size
-- Activity feed showing what Claude is doing in real time (clears properly between projects, CLEAR button works)
+- Activity feed showing what Claude is doing in real time
 - Dynamic learning system. Claude gets smarter about your project over time
 - Full accessibility audit (WCAG AA compliant)
-- Clean terminal output: Node.js deprecation warnings and other CLI noise suppressed
+- Native installer and npm installer detection for all provider CLIs
 - Gemini CLI works with prompts of any size on Windows (piped via stdin, no command line limits)
-- Missing provider detection: clear install instructions when a CLI isn't found
-- Reliable CLI path resolution across all Node.js setups (nvm, volta, standard npm)
+- CLI error detection with actionable guidance (missing CLI, version mismatch, argument errors)
 - Forge mode respects "ask me questions" — won't generate files until you say go
-- Clean terminal output: Gemini console noise, Node.js warnings, and other CLI artifacts suppressed
 
 ---
 
-## Coming in v0.3 — Smarter Routing, Cost Control & Visibility
-
-### Smart Model Routing
-Devforge picks the right model for the job automatically. Opus for planning and deep analysis, Sonnet for implementation, Haiku for quick lookups. On by default. Override any time. Complexity-aware: big projects get upgraded automatically.
+## Coming Next — Cost Control & Visibility
 
 ### Usage Alerts & Burn Rate Monitoring
 Set budget thresholds. Get notified at 50%, 75%, 90% of your daily spend. Live burn rate tracking catches runaway tasks. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.
@@ -74,7 +73,10 @@ Opt-in, transparent, no personal data collected. Help us understand which featur
 
 ---
 
-## v0.4 — Content Depth & Project Visualization
+## v0.4 — Content Depth, Cross-Provider Routing & Project Visualization
+
+### Cross-Provider Routing (Opt-in)
+Route different types of work to different providers automatically. Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types. Extends Devforge's existing Ollama smart routing to paid providers.
 
 ### Full Skill & Research Audit
 Research sweep across all 20 stacks to fill gaps and validate coverage. Includes:
