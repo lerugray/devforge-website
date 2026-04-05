@@ -1,18 +1,20 @@
 
-<h1 style="font-family: monospace; font-size: 20px; color: #336533; line-height: 1.6; margin: 0 0 16px;">A game dev terminal that knows your project cold.</h1>
+<h1 style="font-family: monospace; font-size: 20px; color: #2d5a2d; line-height: 1.6; margin: 0 0 16px;">A game dev terminal that knows your project cold.</h1>
 
 <p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.</p>
 
-<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px;">v0.2.5 live · $9 early access · No subscription · Windows (Mac &amp; Linux coming)</p>
+<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px; margin: 0 0 12px;">v0.3.0 live · $9 early access · No subscription · Windows (Mac &amp; Linux coming)</p>
+
+<p style="font-family: monospace; font-size: 14px; color: #4A485F; margin: 0 0 24px;">Full site with screenshots, roadmap, and details: <a href="https://usedevforge.com" style="color: #2d5a2d;">usedevforge.com</a></p>
 
 <hr>
 
-<p style="font-family: monospace; font-size: 15px; color: #4A485F; line-height: 1.65; border-left: 3px solid #9A99A0; padding-left: 16px; margin: 0 0 24px;">DevForge is a structured UI that wraps AI coding tools. You make the design decisions. DevForge handles context, modes, and version control so Claude stays focused on your project.</p>
+<p style="font-family: monospace; font-size: 15px; color: #4A485F; line-height: 1.65; border-left: 3px solid #6E6D73; padding-left: 16px; margin: 0 0 24px;">DevForge is a structured UI that wraps AI coding tools. You make the design decisions. DevForge handles context, modes, and version control so Claude stays focused on your project.</p>
 
 <table style="width: 100%; border-collapse: collapse; margin: 0 0 8px;">
 <tr>
-<td style="width: 50%; padding: 0 4px 0 0;"><img src="https://usedevforge.com/assets/images/DF2.png" alt="DevForge SNES Light theme" style="width: 100%; border: 1px solid #9A99A0;"></td>
-<td style="width: 50%; padding: 0 0 0 4px;"><img src="https://usedevforge.com/assets/images/DF1.png" alt="DevForge CRT Dark theme" style="width: 100%; border: 1px solid #9A99A0;"></td>
+<td style="width: 50%; padding: 0 4px 0 0;"><img src="https://usedevforge.com/assets/images/DF2.png" alt="DevForge SNES Light theme" style="width: 100%; border: 1px solid #6E6D73;"></td>
+<td style="width: 50%; padding: 0 0 0 4px;"><img src="https://usedevforge.com/assets/images/DF1.png" alt="DevForge CRT Dark theme" style="width: 100%; border: 1px solid #6E6D73;"></td>
 </tr>
 <tr>
 <td style="font-family: monospace; font-size: 15px; color: #4A485F; text-align: center; padding-top: 4px;">SNES Light</td>
@@ -24,11 +26,13 @@
 
 <h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 16px;">What you get.</h2>
 
-<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #336533;">Your GDD Runs the Show</strong> — Claude reads your design doc before every prompt. Your vision stays intact.</p>
+<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #2d5a2d;">Your GDD Runs the Show</strong> — Claude reads your design doc before every prompt. Your vision stays intact.</p>
 
 <p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #725721;">16 Modes, 16 Jobs</strong> — Each mode locks Claude to one job. MOD builds mods. PACKAGE handles distribution.</p>
 
 <p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #405b87;">Git Safety Net</strong> — Session branches, safety snapshots, one-click undo. Built for people who don't touch git.</p>
+
+<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #245f43;">Smart Model Routing</strong> — DevForge picks the right Claude model per task. Opus for architecture, Sonnet for implementation, Haiku for quick lookups. Saves subscription time on simple tasks.</p>
 
 <p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #5c4fa0;">Claude Learns Your Rules</strong> — Ollama suggests project rules after each session. You accept or reject. Claude reads them next time.</p>
 
@@ -38,10 +42,24 @@
 
 <hr>
 
+<h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">4 providers. Auto-detected at startup.</h2>
+
+<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.65; margin: 0 0 8px;">DevForge checks which CLIs are installed when you launch it. Green dot means ready. Red dot means missing, with install instructions right there.</p>
+
+<ul style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.8; padding-left: 20px; margin: 0 0 12px;">
+<li><strong>Claude Code</strong> ($20-200/mo) — Tested, recommended. Session resume, streaming output, cost reporting. Smart model routing picks the right model per task.</li>
+<li><strong>Gemini CLI</strong> (free) — Full activity feed, session resume, auto-approval. Same experience as Claude Code. Free with a Google AI Studio API key.</li>
+<li><strong>Aider</strong> (bring your own key) and <strong>Codex CLI</strong> (OpenAI credits) — Configured, untested. Free access for testers who report back.</li>
+</ul>
+
+<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Built-in PROVIDERS help tab covers install commands, authentication, costs, and troubleshooting for every provider.</p>
+
+<hr>
+
 <h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">16 modes. One job each.</h2>
 
 <p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; margin: 0 0 4px;">
-<strong style="color: #2D2B3D;">FORGE</strong> · <strong style="color: #336533;">GDD</strong> · <strong style="color: #8c4747;">PITCH</strong> · <strong style="color: #725721;">DISCUSS</strong> · <strong style="color: #405b87;">IMPLEMENT</strong> · <strong style="color: #7a3d1a;">DEBUG</strong> · <strong style="color: #256262;">RESEARCH</strong> · <strong style="color: #5c4fa0;">QA</strong> · <strong style="color: #4A485F;">FREEFORM</strong> · <strong style="color: #6a5218;">MARKETING</strong> · <strong style="color: #245f43;">INSTRUCT</strong> · <strong style="color: #44712b;">TEST</strong> · <strong style="color: #7a2040;">SECURITY</strong> · <strong style="color: #7a3060;">UI/UX</strong> · <strong style="color: #7a3d1a;">MOD</strong> · <strong style="color: #5c4fa0;">PACKAGE</strong>
+<strong style="color: #2D2B3D;">FORGE</strong> · <strong style="color: #2d5a2d;">GDD</strong> · <strong style="color: #8c4747;">PITCH</strong> · <strong style="color: #725721;">DISCUSS</strong> · <strong style="color: #405b87;">IMPLEMENT</strong> · <strong style="color: #7a3d1a;">DEBUG</strong> · <strong style="color: #256262;">RESEARCH</strong> · <strong style="color: #5c4fa0;">QA</strong> · <strong style="color: #4A485F;">FREEFORM</strong> · <strong style="color: #6a5218;">MARKETING</strong> · <strong style="color: #245f43;">INSTRUCT</strong> · <strong style="color: #376023;">TEST</strong> · <strong style="color: #7a2040;">SECURITY</strong> · <strong style="color: #7a3060;">UI/UX</strong> · <strong style="color: #7a3d1a;">MOD</strong> · <strong style="color: #5c4fa0;">PACKAGE</strong>
 </p>
 
 <p style="font-family: monospace; font-size: 16px; color: #4A485F; margin: 8px 0 0;">Toggle Analog in the footer and all 16 modes shift to tabletop game design.</p>
@@ -63,76 +81,47 @@
 <li><strong>Activity Feed</strong> — See every file read, edit, and command in real time. Toggle Claude's thinking display.</li>
 <li><strong>Transcript Browser</strong> — Every Claude response saved as markdown. Browse, filter, load as context.</li>
 <li><strong>Diagram Generation</strong> — Architecture diagrams, flowcharts, and charts as PNG from 8 modes.</li>
-<li><strong>Live Research Tools</strong> — Search the web, download books, check trending game dev topics. SETUP RESEARCH walks you through it. Free, optional.</li>
+<li><strong>Live Research Tools</strong> — Search the web, download books, check trending game dev topics. Free, optional.</li>
 <li><strong>Anti-Slop Filter</strong> — 10-rule system strips AI writing patterns. Your output sounds like you wrote it.</li>
 <li><strong>Ollama (Free AI)</strong> — Local AI for session notes, context briefings, rule extraction, and a live ASK bot. Optional.</li>
 <li><strong>Cost Tracking</strong> — Per-project token usage and spend. No separate billing.</li>
+<li><strong>243 Automated Tests</strong> — Provider spawning, argument safety, dual-path consistency, security encoding.</li>
 <li><strong>Oryx Sprites + SFX</strong> — 43 pixel art characters with idle animations, plus 6 boss sprites for milestone events. 8-bit sound effects. All toggleable.</li>
 </ul>
 
 <hr>
 
-<h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">Built for Claude Code.</h2>
-
-<p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Claude Code is the tested, recommended provider. Session resume, streaming output, context window tracking, cost reporting.</p>
-
-<p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Gemini CLI runs with full activity feed, session resume, and auto-approval. Same experience as Claude Code. Use Google AI Studio's free tier to get started with no credit card.</p>
-
-<p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Aider and Codex CLI are configured but untested.</p>
-
-<p style="font-family: monospace; font-size: 16px; color: #4A485F; line-height: 1.65; border-left: 3px solid #9A99A0; padding-left: 12px; margin: 0 0 12px;">Looking for testers willing to try DevForge with Aider or Codex and report back. Free access for multi-provider testers.</p>
-
-<hr>
-
-<p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 8px;"><strong>Windows today.</strong> Mac and Linux builds are possible (Tauri 2) but untested.</p>
-
-<p style="font-family: monospace; font-size: 16px; color: #4A485F; line-height: 1.65; border-left: 3px solid #9A99A0; padding-left: 12px; margin: 0 0 12px;">On Mac or Linux and willing to test? Free access for platform testers who report bugs.</p>
-
-<hr>
-
 <h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">What's next.</h2>
 
-<p style="font-family: monospace; font-size: 15px; color: #725721; margin: 0 0 8px;"><strong>v0.3 — Smarter Routing, Cost Control &amp; Visibility</strong></p>
+<p style="font-family: monospace; font-size: 15px; color: #725721; margin: 0 0 8px;"><strong>Coming Next — Cost Control &amp; Visibility</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Smart Model Routing</strong> — DevForge picks the right model for the job. Opus for planning, Sonnet for implementation, Haiku for quick lookups. On by default, override any time.</li>
-<li><strong>Usage Alerts &amp; Burn Rate</strong> — Set budget thresholds. Get notified at 50%, 75%, 90% of daily spend. DevForge pauses autonomous tabs when spend accelerates. See exactly how much Ollama saved you.</li>
-<li><strong>Smarter Autonomous Tabs</strong> — Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become actual multi-step workflows. Progress reports after each step.</li>
-<li><strong>ASK Bot Upgrade</strong> — Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation.</li>
-<li><strong>LENS Mode</strong> — Editorial review. Flags representation issues, content ratings, and regional sensitivity. PITCH finds design flaws. LENS finds blind spots.</li>
-<li><strong>Code Browser Language Expansion</strong> — Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added.</li>
-<li><strong>Native Notifications</strong> — Task completion alerts when DevForge is minimized. System tray, taskbar progress bar.</li>
-<li><strong>Stack-Aware Test Automation</strong> — TEST mode generates test suites using the right framework for your stack. Run tests from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug with context. Config validation for Ikemen GO, mod structures, ROM headers. All 20 platforms.</li>
-<li><strong>Anonymous Usage Insights</strong> — Opt-in, transparent, no personal data. See exactly what gets sent before opting in. Off by default.</li>
+<li><strong>Usage Alerts &amp; Burn Rate</strong> — Set budget thresholds. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you.</li>
+<li><strong>Smarter Autonomous Tabs</strong> — Ollama feeds tasks to Claude one at a time. Progress reports after each step.</li>
+<li><strong>ASK Bot Upgrade</strong> — Pop-out floating window with selectable pixel art portrait. Portrait reacts to conversation.</li>
+<li><strong>LENS Mode</strong> — Editorial review. Flags representation issues, content ratings, and regional sensitivity. PITCH stress-tests your design. LENS stress-tests your perception.</li>
+<li><strong>Stack-Aware Test Automation</strong> — TEST mode generates test suites for your stack. Run from a button, failed tests auto-route to Debug. Works across all 20 platforms.</li>
 </ul>
 
-<p style="font-family: monospace; font-size: 15px; color: #5c4fa0; margin: 16px 0 8px;"><strong>v0.4 — Content Depth &amp; Project Visualization</strong></p>
+<p style="font-family: monospace; font-size: 15px; color: #5c4fa0; margin: 16px 0 8px;"><strong>v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Full Skill &amp; Research Audit</strong> — Research sweep across all 20 stacks. Multiplayer infrastructure (traditional, MMO, async patterns). 3D game dev tooling. Pen &amp; paper RPG systems and open SRDs.</li>
-<li><strong>MOD Mode Expansion</strong> — Strategy and simulation modding (Dominions 6, Aurora 4X, Dwarf Fortress). ROM hacking for SNES, GBA, GB. Arcade modding via MAME.</li>
-<li><strong>Pen &amp; Paper RPG Design</strong> — Tabletop RPG design in analog mode. Dice systems, class building, encounter balance, bestiary generation. Draws from open SRDs. Generates character sheets, GM screens, and random tables.</li>
-<li><strong>Art Asset Pipeline</strong> — Free, browser-based art generation. Nano Banana generates base sprites, Grok animates them, SpriteMaster converts video to sprite sheets. ComfyUI as a local alternative.</li>
-<li><strong>Obsidian Vault Export</strong> — One-click export of your GDD, session notes, transcripts, research, and task lists into a linked Obsidian wiki. Works with any markdown wiki tool.</li>
+<li><strong>Cross-Provider Routing</strong> — Route Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types.</li>
+<li><strong>Full Skill &amp; Research Audit</strong> — Multiplayer infrastructure, 3D game dev tooling, pen &amp; paper RPG systems. Per-stack community research.</li>
+<li><strong>Art Asset Pipeline</strong> — Free, browser-based sprite generation and animation. ComfyUI as a local alternative.</li>
+<li><strong>Obsidian Vault Export</strong> — One-click export into a linked Obsidian wiki.</li>
 </ul>
 
 <p style="font-family: monospace; font-size: 15px; color: #256262; margin: 16px 0 8px;"><strong>v0.5 — Ship &amp; Share</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Localization &amp; Translation</strong> — Extract strings, translate to any language, generate locale files for your stack. Syncs when source text changes. Lives in PACKAGE mode.</li>
-<li><strong>DevForge MCP Server</strong> — Use DevForge's modes, skills, and context from VS Code, Cursor, or raw Claude Code. Free and open source.</li>
-<li><strong>Remote Dispatch</strong> — Message DevForge from your phone via Telegram. Send tasks, ask the ASK bot what Claude is doing. Send screenshots and concept art.</li>
-</ul>
-
-<p style="font-family: monospace; font-size: 15px; color: #4A485F; margin: 16px 0 8px;"><strong>Idea Bank</strong></p>
-
-<ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Sprite Visualizer</strong> — Watch pixel characters act out what Claude is doing. Reading a file opens a book. Running tests pulls a lever.</li>
-<li><strong>Companion App</strong> — Native iOS/Android app for remote dispatch, ASK bot, and usage monitoring.</li>
-<li><strong>Voice Input</strong> — Speak prompts instead of typing. Mic button next to BUILD &amp; SEND.</li>
-<li><strong>Can It Run Doom?</strong> — Yes.</li>
+<li><strong>Localization &amp; Translation</strong> — Extract strings, translate, generate locale files for your stack.</li>
+<li><strong>DevForge MCP Server</strong> — Use DevForge from VS Code, Cursor, or raw Claude Code. Free and open source.</li>
+<li><strong>Remote Dispatch</strong> — Message DevForge from your phone via Telegram.</li>
 </ul>
 
 <hr>
 
-<p style="font-family: monospace; font-size: 16px; color: #4A485F; margin: 0;">Pay once, keep it. Claude Code subscription sold separately.</p>
+<p style="font-family: monospace; font-size: 16px; color: #4A485F; margin: 0 0 8px;">Pay once, keep it. Claude Code subscription sold separately.</p>
+
+<p style="font-family: monospace; font-size: 14px; color: #4A485F; margin: 0;">Full details at <a href="https://usedevforge.com" style="color: #2d5a2d;">usedevforge.com</a></p>
