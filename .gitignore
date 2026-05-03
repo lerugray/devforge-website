@@ -15,3 +15,6 @@ wrangler.toml
 .env*
 *.env
 node_modules/
+
+# Per-user Claude Code permissions cache
+.claude/
