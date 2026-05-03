@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevForge — Game Development Environment</title>
-    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 16 specialized modes. One-click undo. $9 early access. Windows, Mac and Linux coming.">
+    <meta name="description" content="A desktop game dev environment that keeps your Game Design Document loaded. 17 specialized modes. One-click undo. $9 early access. Windows and macOS available.">
     <meta property="og:title" content="DevForge — Game Development Environment">
-    <meta property="og:description" content="A desktop game dev environment that keeps your GDD loaded. 16 specialized modes. One-click undo. $9 early access.">
+    <meta property="og:description" content="A desktop game dev environment that keeps your GDD loaded. 17 specialized modes. One-click undo. $9 early access.">
     <meta property="og:image" content="https://usedevforge.com/assets/images/og-image.png">
     <meta property="og:url" content="https://usedevforge.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DevForge — Game Development Environment">
-    <meta name="twitter:description" content="A desktop game dev environment that keeps your GDD loaded. 16 specialized modes. One-click undo. $9 early access.">
+    <meta name="twitter:description" content="A desktop game dev environment that keeps your GDD loaded. 17 specialized modes. One-click undo. $9 early access.">
     <meta name="twitter:image" content="https://usedevforge.com/assets/images/og-image.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="assets/images/favicon-32.png" sizes="32x32">
@@ -35,7 +35,7 @@
                 <p class="subtext">
                     Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.
                 </p>
-                <p class="price-line">v0.3.0 live &middot; $9 early access &middot; No subscription &middot; Windows (Mac &amp; Linux coming)</p>
+                <p class="price-line">v0.3.1 live &middot; $9 early access &middot; No subscription &middot; Windows + macOS</p>
                 <a href="https://conflict-simulations-llc.itch.io/devforge" class="btn-buy btn-buy--hero">Buy on Itch.io // $9</a>
             </section>
 
@@ -116,10 +116,10 @@
                     <div class="terminal-block glow-amber">
                         <div class="block-header">
                             <span class="prompt-char" aria-hidden="true">&gt;</span>
-                            <h3 style="color: var(--amber);">16 Modes, 16 Jobs</h3>
+                            <h3 style="color: var(--amber);">17 Modes, 17 Jobs</h3>
                         </div>
                         <p class="block-body">
-                            DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. MOD builds mods. PACKAGE handles distribution. Each mode locks Claude to one job.
+                            DISCUSS talks design. IMPLEMENT writes code. PITCH stress-tests your scope. LENS stress-tests how your content will be perceived. MOD builds mods. PACKAGE handles distribution. Each mode locks Claude to one job.
                         </p>
                     </div>
 
@@ -202,7 +202,7 @@
 
             <!-- Modes -->
             <section class="modes-section" aria-labelledby="modes-heading">
-                <h2 id="modes-heading">16 modes. One job each.</h2>
+                <h2 id="modes-heading">17 modes. One job each.</h2>
                 <ul class="modes-grid">
                     <li><button class="mode-cell" style="color: var(--text-primary);" data-mode="forge">Forge</button></li>
                     <li><button class="mode-cell" style="color: var(--green);" data-mode="gdd">GDD</button></li>
@@ -218,6 +218,7 @@
                     <li><button class="mode-cell" style="color: var(--lime);" data-mode="test">Test</button></li>
                     <li><button class="mode-cell" style="color: var(--crimson);" data-mode="security">Security</button></li>
                     <li><button class="mode-cell" style="color: var(--pink);" data-mode="uiux">UI/UX</button></li>
+                    <li><button class="mode-cell" style="color: #b89dd6;" data-mode="lens">Lens</button></li>
                     <li><button class="mode-cell" style="color: var(--orange);" data-mode="mod">Mod</button></li>
                     <li><button class="mode-cell" style="color: var(--purple);" data-mode="package">Package</button></li>
                 </ul>
@@ -248,7 +249,7 @@
             <!-- Analog Mode -->
             <section class="info-section" aria-labelledby="analog-heading">
                 <h2 id="analog-heading">Analog Mode for tabletop design.</h2>
-                <p>Toggle Analog in the footer and all 14 modes shift to tabletop. IMPLEMENT writes rules text and component specs instead of code. DEBUG finds rules contradictions. QA audits component consistency and first-play clarity. MARKETING writes Kickstarter pages and BoardGameGeek listings.</p>
+                <p>Toggle Analog in the footer and all 15 modes shift to tabletop. IMPLEMENT writes rules text and component specs instead of code. DEBUG finds rules contradictions. QA audits component consistency and first-play clarity. LENS reviews faction naming, historical framing, and gendered rule language. MARKETING writes Kickstarter pages and BoardGameGeek listings.</p>
                 <p>Design a board game with Analog on, then flip it off and use Implement to build the digital version. Your GDD carries over.</p>
             </section>
 
@@ -342,9 +343,9 @@
 
             <!-- Platform Support -->
             <section class="info-section" aria-labelledby="platform-heading">
-                <h2 id="platform-heading">Windows today. Mac and Linux next.</h2>
-                <p>DevForge is developed and tested on Windows. Tauri 2 builds for all three platforms, and there's nothing Windows-specific in the codebase, but Mac and Linux haven't been tested yet.</p>
-                <p class="callout-text">On Mac or Linux and willing to test? Free access for platform testers who report bugs.</p>
+                <h2 id="platform-heading">Windows and macOS today. Linux maybe later.</h2>
+                <p>DevForge ships on Windows 10/11 and macOS 14+ (Apple Silicon). The Mac build went through a full smoke pass before launch — provider auto-detect, mode switching, theme toggle, end-to-end Claude session, all green. Linux hasn't been tested but the codebase has nothing platform-specific blocking it; Tauri 2 builds for all three.</p>
+                <p class="callout-text">On Linux and willing to test? Free access for platform testers who report bugs.</p>
             </section>
 
             <!-- The Details -->
@@ -372,15 +373,21 @@
             <!-- Roadmap -->
             <section class="info-section" aria-labelledby="roadmap-heading">
                 <h2 id="roadmap-heading">What's next.</h2>
-                <h3 style="color: var(--amber); margin-bottom: var(--space-12);">Coming Next — Cost Control &amp; Visibility</h3>
+                <h3 style="color: var(--green); margin-bottom: var(--space-12);">Just Shipped — v0.3.1</h3>
                 <ul class="detail-list">
-                    <li><strong>Usage Alerts &amp; Burn Rate</strong> Set budget thresholds. Get notified at 50%, 75%, and 90% of your daily spend. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.</li>
+                    <li><strong>macOS support</strong> Apple Silicon Mac users can run DevForge now. The .dmg is on the downloads page alongside the Windows installer. Tested end-to-end before launch.</li>
+                    <li><strong>Cost Transparency Stack</strong> Pre-send dollar estimate next to the token count. Live running-cost chip in the activity feed during streaming. Burn-rate alert when output sustains past 100 tokens/sec for 3 seconds. Daily and weekly budget caps with soft confirm dialogs. STATS panel rolls it all up: Total Spent, Avg Cost / Prompt, Today's Spend, This Week's Spend, Top Spend by Project. Computed locally. No data leaves your machine.</li>
+                    <li><strong>LENS Mode (the 17th)</strong> Editorial review for your game's content. Flags cultural representation, mechanic parallels, content rating implications (ESRB / PEGI / CERO), regional sensitivity, and language audit. Severity tiers and 2-3 options per finding. PITCH stress-tests your design. LENS stress-tests your perception. Not a censor.</li>
+                    <li><strong>ASK Bot Pop-Out</strong> POP OUT button detaches the Ollama-powered helper into its own Tauri window. Live context flows from main → pop-out (claudeRunning, current task, mode, runtime, last activity entries, last 500 chars of streamed text). Stays visible across mode switches.</li>
+                    <li><strong>Native Notifications</strong> Windows Toast / NSUserNotification alerts when DevForge is minimized and a long Claude run finishes. Plugin-backed, not browser API.</li>
+                    <li><strong>Code Browser Languages</strong> Syntax highlighting expanded from 14 to 20 stacks. Added Swift (iOS), Kotlin (Android), Ruby (RPG Maker), asm6502 (NES), INI (Ikemen GO). PICO-8 (.p8) maps to Lua.</li>
+                    <li><strong>HABITS Dashboard</strong> Last-7-days self-insight cards in STATS: Top Mode, Avg Prompts / Session, Peak Spend Day, Active Days. Computed locally.</li>
+                    <li><strong>TEST Mode REPORT button</strong> Generates a structured markdown playtest report from the test log, auto-grouped by tag. COPY to clipboard or SAVE TO FILE writes <code>playtest-YYYY-MM-DD-HHmm.md</code> to the project root.</li>
+                </ul>
+                <h3 style="color: var(--amber); margin-top: var(--space-24); margin-bottom: var(--space-12);">Coming Next</h3>
+                <ul class="detail-list">
                     <li><strong>Smarter Autonomous Tabs</strong> Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become multi-step workflows instead of single prompts. Progress reports after each step.</li>
-                    <li><strong>ASK Bot Upgrade</strong> Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation.</li>
-                    <li><strong>LENS Mode</strong> Editorial review for your game's content. Flags representation issues, content rating implications, and regional sensitivity before your players find them. PITCH stress-tests your design. LENS stress-tests your perception.</li>
-                    <li><strong>Stack-Aware Test Automation</strong> TEST mode generates test suites using the right framework for your stack. Run from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug with context. Config validation for Ikemen GO characters, mod structures, ROM headers. Works across all 20 platforms.</li>
-                    <li><strong>More Languages in Code Browser</strong> Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added.</li>
-                    <li><strong>Native Notifications</strong> Task completion alerts when DevForge is minimized. System tray, taskbar progress bar.</li>
+                    <li><strong>Stack-Aware Test Automation</strong> TEST mode generates real test suites using the right framework for your stack. Run from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug with context. Config validation for Ikemen GO characters, mod structures, ROM headers. Works across all 20 platforms. (TEST mode REPORT shipped in v0.3.1; the suite-generation half is the un-shipped part.)</li>
                     <li><strong>Anonymous Usage Insights</strong> Opt-in, transparent, no personal data. You can view exactly what gets sent before opting in. Off by default.</li>
                 </ul>
                 <h3 style="color: var(--purple); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</h3>

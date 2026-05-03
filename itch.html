@@ -3,7 +3,7 @@
 
 <p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.</p>
 
-<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px; margin: 0 0 12px;">v0.3.0 live · $9 early access · No subscription · Windows (Mac &amp; Linux coming)</p>
+<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px; margin: 0 0 12px;">v0.3.1 live · $9 early access · No subscription · Windows + macOS</p>
 
 <p style="font-family: monospace; font-size: 14px; color: #4A485F; margin: 0 0 24px;">Full site with screenshots, roadmap, and details: <a href="https://usedevforge.com" style="color: #2d5a2d;">usedevforge.com</a></p>
 
@@ -28,7 +28,7 @@
 
 <p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #2d5a2d;">Your GDD Runs the Show</strong> — Claude reads your design doc before every prompt. Your vision stays intact.</p>
 
-<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #725721;">16 Modes, 16 Jobs</strong> — Each mode locks Claude to one job. MOD builds mods. PACKAGE handles distribution.</p>
+<p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #725721;">17 Modes, 17 Jobs</strong> — Each mode locks Claude to one job. MOD builds mods. PACKAGE handles distribution. LENS stress-tests how content will be perceived.</p>
 
 <p style="font-family: monospace; font-size: 15px; color: #2D2B3D; line-height: 1.6; margin: 0 0 8px;"><strong style="color: #405b87;">Git Safety Net</strong> — Session branches, safety snapshots, one-click undo. Built for people who don't touch git.</p>
 
@@ -56,13 +56,13 @@
 
 <hr>
 
-<h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">16 modes. One job each.</h2>
+<h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">17 modes. One job each.</h2>
 
 <p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; margin: 0 0 4px;">
-<strong style="color: #2D2B3D;">FORGE</strong> · <strong style="color: #2d5a2d;">GDD</strong> · <strong style="color: #8c4747;">PITCH</strong> · <strong style="color: #725721;">DISCUSS</strong> · <strong style="color: #405b87;">IMPLEMENT</strong> · <strong style="color: #7a3d1a;">DEBUG</strong> · <strong style="color: #256262;">RESEARCH</strong> · <strong style="color: #5c4fa0;">QA</strong> · <strong style="color: #4A485F;">FREEFORM</strong> · <strong style="color: #6a5218;">MARKETING</strong> · <strong style="color: #245f43;">INSTRUCT</strong> · <strong style="color: #376023;">TEST</strong> · <strong style="color: #7a2040;">SECURITY</strong> · <strong style="color: #7a3060;">UI/UX</strong> · <strong style="color: #7a3d1a;">MOD</strong> · <strong style="color: #5c4fa0;">PACKAGE</strong>
+<strong style="color: #2D2B3D;">FORGE</strong> · <strong style="color: #2d5a2d;">GDD</strong> · <strong style="color: #8c4747;">PITCH</strong> · <strong style="color: #725721;">DISCUSS</strong> · <strong style="color: #405b87;">IMPLEMENT</strong> · <strong style="color: #7a3d1a;">DEBUG</strong> · <strong style="color: #256262;">RESEARCH</strong> · <strong style="color: #5c4fa0;">QA</strong> · <strong style="color: #4A485F;">FREEFORM</strong> · <strong style="color: #6a5218;">MARKETING</strong> · <strong style="color: #245f43;">INSTRUCT</strong> · <strong style="color: #376023;">TEST</strong> · <strong style="color: #7a2040;">SECURITY</strong> · <strong style="color: #7a3060;">UI/UX</strong> · <strong style="color: #6a4f8c;">LENS</strong> · <strong style="color: #7a3d1a;">MOD</strong> · <strong style="color: #5c4fa0;">PACKAGE</strong>
 </p>
 
-<p style="font-family: monospace; font-size: 16px; color: #4A485F; margin: 8px 0 0;">Toggle Analog in the footer and all 16 modes shift to tabletop game design.</p>
+<p style="font-family: monospace; font-size: 16px; color: #4A485F; margin: 8px 0 0;">Toggle Analog in the footer and all 15 modes shift to tabletop game design.</p>
 
 <hr>
 
@@ -84,8 +84,11 @@
 <li><strong>Live Research Tools</strong> — Search the web, download books, check trending game dev topics. Free, optional.</li>
 <li><strong>Anti-Slop Filter</strong> — 10-rule system strips AI writing patterns. Your output sounds like you wrote it.</li>
 <li><strong>Ollama (Free AI)</strong> — Local AI for session notes, context briefings, rule extraction, and a live ASK bot. Optional.</li>
-<li><strong>Cost Tracking</strong> — Per-project token usage and spend. No separate billing.</li>
-<li><strong>243 Automated Tests</strong> — Provider spawning, argument safety, dual-path consistency, security encoding.</li>
+<li><strong>Cost Tracking</strong> — Pre-send dollar estimate, live running-cost chip, burn-rate alert, daily/weekly budget caps, STATS panel with per-project + per-mode breakdowns. Computed locally.</li>
+<li><strong>Native Notifications</strong> — Windows Toast / NSUserNotification alerts when DevForge is minimized and a long Claude run finishes.</li>
+<li><strong>HABITS Dashboard</strong> — Last-7-days self-insight cards in STATS: Top Mode, Avg Prompts / Session, Peak Spend Day, Active Days. Computed locally.</li>
+<li><strong>ASK Bot Pop-Out</strong> — Detach the Ollama-powered helper into its own window. Live context flows main → pop-out so it stays visible across mode switches.</li>
+<li><strong>~500 Automated Tests</strong> — Provider spawning, argument safety, dual-path consistency, pop-out capability, bundle ID migration, malformed-path fallback, joinPath usage, Mac path validation, fs scope.</li>
 <li><strong>Oryx Sprites + SFX</strong> — 43 pixel art characters with idle animations, plus 6 boss sprites for milestone events. 8-bit sound effects. All toggleable.</li>
 </ul>
 
@@ -93,14 +96,25 @@
 
 <h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">What's next.</h2>
 
-<p style="font-family: monospace; font-size: 15px; color: #725721; margin: 0 0 8px;"><strong>Coming Next — Cost Control &amp; Visibility</strong></p>
+<p style="font-family: monospace; font-size: 15px; color: #2d5a2d; margin: 0 0 8px;"><strong>Just Shipped — v0.3.1</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Usage Alerts &amp; Burn Rate</strong> — Set budget thresholds. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you.</li>
+<li><strong>macOS support</strong> — Apple Silicon Mac users can run DevForge now. The .dmg is on the downloads page alongside the Windows installer.</li>
+<li><strong>Cost Transparency Stack</strong> — Pre-send dollar estimate, live running-cost chip, burn-rate alert, daily/weekly budget caps, STATS panel rollup. Computed locally.</li>
+<li><strong>LENS Mode (the 17th)</strong> — Editorial review. Flags cultural representation, mechanic parallels, content rating implications, regional sensitivity. Severity tiers and 2-3 options per finding. Not a censor.</li>
+<li><strong>ASK Bot Pop-Out</strong> — Detached Tauri window for the Ollama helper. Live context flows main → pop-out. Stays visible across mode switches.</li>
+<li><strong>Native Notifications</strong> — Windows Toast / NSUserNotification alerts. Plugin-backed.</li>
+<li><strong>Code Browser Languages</strong> — Syntax highlighting expanded from 14 to 20 stacks. Swift, Kotlin, Ruby, asm6502, Ikemen INI added.</li>
+<li><strong>HABITS Dashboard</strong> — Last-7-days self-insight cards in STATS.</li>
+<li><strong>TEST Mode REPORT</strong> — Auto-grouped markdown playtest reports from the test log.</li>
+</ul>
+
+<p style="font-family: monospace; font-size: 15px; color: #725721; margin: 16px 0 8px;"><strong>Coming Next</strong></p>
+
+<ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
 <li><strong>Smarter Autonomous Tabs</strong> — Ollama feeds tasks to Claude one at a time. Progress reports after each step.</li>
-<li><strong>ASK Bot Upgrade</strong> — Pop-out floating window with selectable pixel art portrait. Portrait reacts to conversation.</li>
-<li><strong>LENS Mode</strong> — Editorial review. Flags representation issues, content ratings, and regional sensitivity. PITCH stress-tests your design. LENS stress-tests your perception.</li>
-<li><strong>Stack-Aware Test Automation</strong> — TEST mode generates test suites for your stack. Run from a button, failed tests auto-route to Debug. Works across all 20 platforms.</li>
+<li><strong>Stack-Aware Test Automation</strong> — TEST mode generates real test suites for your stack. Failed tests auto-route to Debug. Works across all 20 platforms.</li>
+<li><strong>Anonymous Usage Insights</strong> — Opt-in, transparent, no personal data. Off by default.</li>
 </ul>
 
 <p style="font-family: monospace; font-size: 15px; color: #5c4fa0; margin: 16px 0 8px;"><strong>v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</strong></p>

@@ -6,9 +6,9 @@
 
 ---
 
-## What's Live (v0.3.0)
+## What's Live (v0.3.1)
 
-- 16 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, DISCUSS, MOD, PACKAGE)
+- 17 specialized modes (FORGE, GDD, PITCH, IMPLEMENT, DEBUG, RESEARCH, QA, FREEFORM, MARKETING, INSTRUCT, TEST, SECURITY, UI/UX, **LENS**, DISCUSS, MOD, PACKAGE)
 - 50 built-in game dev skills (37 digital, 13 tabletop)
 - 20 supported platforms (Godot GDScript, Godot C#, Unity, Unreal, Rust, Python, Ikemen GO/MUGEN, iOS, Android, and 11 more including retro consoles)
 - Godot 4 C# stack with dedicated GodotSharp skill covering source generators, signals, exports, memory management, and Unity migration patterns
@@ -22,7 +22,7 @@
 - Resizable prompt bar and failed prompt recovery
 - Manage learned rules (edit and delete from RULES modal)
 - Ollama CORS proxy (no environment variables needed) and auto-reconnect
-- 243 automated tests (Rust backend + JS smoke tests with provider reliability regression suite)
+- ~500 automated tests (Rust backend + JS smoke tests with provider reliability regression suite, pop-out capability checks, bundle ID migration, malformed-path fallback, Mac path validation, fs scope)
 - MOD mode for modding Skyrim, Minecraft, Factorio, RimWorld, Stardew Valley, and BepInEx/Unity games
 - PACKAGE mode for stack-aware build and distribution. itch.io, Steam, app stores, mod workshops, retro ROMs
 - Fighting game support (Ikemen GO / MUGEN) with character creation, state machines, hitbox patterns, and frame data
@@ -45,28 +45,41 @@
 
 ---
 
-## Coming Next — Cost Control & Visibility
+## Just Shipped — v0.3.1
 
-### Usage Alerts & Burn Rate Monitoring
-Set budget thresholds. Get notified at 50%, 75%, 90% of your daily spend. Live burn rate tracking catches runaway tasks. Auto-pause autonomous tabs if costs spike. See exactly how much Ollama saved you in concrete dollar amounts.
+### macOS support
+Apple Silicon Macs can run Devforge now. The .dmg is on the downloads page alongside the existing Windows installer. Tested end-to-end before launch including provider auto-detect, mode switching, theme toggle, and a real Claude session.
+
+### Cost Transparency Stack
+Built-in cost tracking shows what each Claude session is actually costing you. Pre-send dollar estimate next to the token count. Live running-cost chip in the activity feed during streaming. Burn-rate alert when output sustains past 100 tokens/sec for 3 seconds. Daily and weekly budget caps with soft confirm dialogs. STATS panel rolls it all up: Total Spent, Avg Cost / Prompt, Today's Spend, This Week's Spend, Top Spend by Project. All computed locally. No data leaves your machine.
+
+### LENS Mode (the 17th)
+Editorial review for your game's content. Flags cultural representation, mechanic parallels, content rating implications (ESRB / PEGI / CERO), regional sensitivity, and language audit. Severity tiers (Notable / Concerning / High-risk) and 2-3 options per finding including "leave as-is and document the intent." Not a censor.
+
+### ASK Bot Pop-Out
+Pop-out as a Tauri secondary window. Live context flows from main → pop-out (claudeRunning state, current task, mode, runtime, last activity entries, last 500 chars of streamed text). Stays visible across mode switches and Claude execution.
+
+### Native Notifications
+Windows Toast / NSUserNotification alerts when Devforge is minimized and a long Claude run finishes. Plugin-backed (tauri-plugin-notification), not browser API.
+
+### Code Browser Languages
+Syntax highlighting expanded from 14 to 20 stacks. Added Swift (iOS), Kotlin (Android), Ruby (RPG Maker), asm6502 (NES), INI (Ikemen GO `.def`/`.cns`/`.cmd`). PICO-8 (`.p8`) maps to the existing Lua grammar.
+
+### HABITS Dashboard
+Last-7-days self-insight cards in STATS: Top Mode (with count), Avg Prompts / Session, Peak Spend Day, Active Days. Computed locally — no data leaves your machine.
+
+### TEST Mode REPORT button
+Generates a structured markdown playtest report from the test log, auto-grouped by tag (Bugs → Rules → Balance → Timing → Questions → Feedback → Working → Notes). COPY to clipboard or SAVE TO FILE writes `playtest-YYYY-MM-DD-HHmm.md` to the project root.
+
+---
+
+## Coming Next
 
 ### Smarter Autonomous Tabs
 Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become actual multi-step workflows instead of single prompts. Progress reports after each step.
 
-### ASK Bot Upgrade
-Pop-out as a floating window that stays open while Claude works. Selectable pixel art portrait. Portrait reacts to conversation. Non-programmers get a persistent, friendly guide visible at all times.
-
-### LENS Mode
-Editorial review for your game's content. Flags representation issues, content rating implications, and regional sensitivity before your players find them. PITCH stress-tests your design. LENS stress-tests your perception.
-
-### More Languages in Code Browser
-Syntax highlighting for all 20 stacks. Swift, Kotlin, Ruby, Assembly added. Every stack's primary language works in the built-in code viewer.
-
 ### Stack-Aware Test Automation
-TEST mode becomes a full automated testing hub. Devforge picks the right test framework for your stack and generates a test suite. Run tests from a button, see pass/fail results in the activity feed, and failed tests auto-route to Debug mode with context pre-filled. Config validation for stacks where you can't run the game directly: file consistency checks for Ikemen GO characters, mod structure validation, ROM header checks. Works across all 20 platforms.
-
-### Native System Notifications
-Task completion notifications that work when Devforge is minimized. System tray alerts, taskbar progress bar.
+TEST mode becomes a full automated testing hub. Devforge picks the right test framework for your stack and generates a test suite. Run tests from a button, see pass/fail results in the activity feed, and failed tests auto-route to Debug mode with context pre-filled. Config validation for stacks where you can't run the game directly: file consistency checks for Ikemen GO characters, mod structure validation, ROM header checks. Works across all 20 platforms. (TEST mode REPORT shipped in v0.3.1; the suite-generation half is the un-shipped part.)
 
 ### Anonymous Usage Insights
 Opt-in, transparent, no personal data collected. Help us understand which features you use and where you hit friction. You can view exactly what gets sent before opting in. Off by default.
