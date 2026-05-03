@@ -1,0 +1,27 @@
+# Defense-in-depth mirror of `projects.yaml §devforge-website`
+# hands_off list in the main GeneralStaff repo. Any change here
+# must land there too.
+#
+# All taste-bearing public copy + per-version update briefs.
+# Bot cycles are not currently scaffolded for this project
+# (engineer_command is fail-closed); this list documents intent
+# rather than blocking active bot edits.
+
+hands_off:
+  # Project rules
+  - "CLAUDE.md"
+  # Voice-bearing public copy
+  - "index.html"
+  - "itch.html"
+  - "ROADMAP_PUBLIC.md"
+  # Per-version update briefs (handoff artifacts)
+  - "BRIEF_V*.md"
+  - "brief archive/"
+  # Visual + asset surfaces
+  - "assets/"
+  - "css/"
+  - "favicon.ico"
+  # Dependency / build (if any added later)
+  - "package.json"
+  - "package-lock.json"
+  - "node_modules/"
