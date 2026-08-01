@@ -3,7 +3,7 @@
 
 <p style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.65; margin: 0 0 12px;">Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.</p>
 
-<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px; margin: 0 0 12px;">v0.3.1 live · $9 early access · No subscription · Windows + macOS</p>
+<p style="font-family: monospace; font-size: 16px; color: #725721; letter-spacing: 0.5px; margin: 0 0 12px;">v0.4.0 live · $9 early access · No subscription · Windows + macOS</p>
 
 <p style="font-family: monospace; font-size: 14px; color: #4A485F; margin: 0 0 24px;">Full site with screenshots, roadmap, and details: <a href="https://usedevforge.com" style="color: #2d5a2d;">usedevforge.com</a></p>
 
@@ -96,34 +96,29 @@
 
 <h2 style="font-family: monospace; font-size: 18px; color: #2D2B3D; margin: 0 0 12px;">What's next.</h2>
 
-<p style="font-family: monospace; font-size: 15px; color: #2d5a2d; margin: 0 0 8px;"><strong>Just Shipped — v0.3.1</strong></p>
+<p style="font-family: monospace; font-size: 15px; color: #2d5a2d; margin: 0 0 8px;"><strong>Just Shipped — v0.4.0</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>macOS support</strong> — Apple Silicon Mac users can run DevForge now. The .dmg is on the downloads page alongside the Windows installer.</li>
-<li><strong>Cost Transparency Stack</strong> — Pre-send dollar estimate, live running-cost chip, burn-rate alert, daily/weekly budget caps, STATS panel rollup. Computed locally.</li>
-<li><strong>LENS Mode (the 17th)</strong> — Editorial review. Flags cultural representation, mechanic parallels, content rating implications, regional sensitivity. Severity tiers and 2-3 options per finding. Not a censor.</li>
-<li><strong>ASK Bot Pop-Out</strong> — Detached Tauri window for the Ollama helper. Live context flows main → pop-out. Stays visible across mode switches.</li>
-<li><strong>Native Notifications</strong> — Windows Toast / NSUserNotification alerts. Plugin-backed.</li>
-<li><strong>Code Browser Languages</strong> — Syntax highlighting expanded from 14 to 20 stacks. Swift, Kotlin, Ruby, asm6502, Ikemen INI added.</li>
-<li><strong>HABITS Dashboard</strong> — Last-7-days self-insight cards in STATS.</li>
-<li><strong>TEST Mode REPORT</strong> — Auto-grouped markdown playtest reports from the test log.</li>
+<li><strong>103 New Stack Skills</strong> — Platform coverage now 20+ engines and targets: iOS/Android, Godot, Unity, Unreal, Ren'Py, LOVE, GameMaker, RPG Maker, GB Studio, NES/GB/GBA/Genesis, PICO-8, plus 10 classic source-port MOD targets (Doom, Quake 1-3, Diablo, Duke 3D and friends). Every skill web-verified against current docs.</li>
+<li><strong>Run Coordinator</strong> — Sidebar shows live status of all active AUTO tabs, with crash recovery.</li>
+<li><strong>hands_off.yaml Awareness</strong> — AUTO tabs warn before touching files a project marked hand-tuned.</li>
+<li><strong>Per-Provider Concurrency Caps</strong> — Claude 4 / Gemini 3 / Ollama 2, global 9. Replaces the flat limit.</li>
+<li><strong>Per-Tab Provider Runtime</strong> — AUTO-tab resume fixed end-to-end. MERGE action for parallel worktree tabs.</li>
+<li><strong>Security Hardening</strong> — Hard provider allowlist on session spawning. SSRF allowlist hardening with opt-in remote Ollama hosts.</li>
+<li><strong>Obsidian Vault Export</strong> — Export GDD, session notes, transcripts, research, and task lists from the project sidebar.</li>
+<li><strong>Smaller Downloads</strong> — Thin-LTO + stripping. Smoke suite grew from 496 to 1085 checks, all green.</li>
+<li><strong>Docs Rewrite</strong> — MANUAL and QUICKSTART rewritten to cover the autonomy arc.</li>
 </ul>
 
 <p style="font-family: monospace; font-size: 15px; color: #725721; margin: 16px 0 8px;"><strong>Coming Next</strong></p>
 
 <ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
 <li><strong>Smarter Autonomous Tabs</strong> — Ollama feeds tasks to Claude one at a time. Progress reports after each step.</li>
+                    <li><strong>Cross-Provider Routing</strong> Route different types of work to different providers. Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types. (Provider-expansion spec ratified; the routing layer is the next build.)</li>
+                    <li><strong>Pen &amp; Paper RPG Design</strong> Tabletop RPG design in analog mode. Dice system design, class building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.</li>
+                    <li><strong>Art Asset Pipeline</strong> Free, browser-based art generation. Base sprites, animated loops, sprite-sheet conversion, with ComfyUI as a local alternative.</li>
 <li><strong>Stack-Aware Test Automation</strong> — TEST mode generates real test suites for your stack. Failed tests auto-route to Debug. Works across all 20 platforms.</li>
 <li><strong>Anonymous Usage Insights</strong> — Opt-in, transparent, no personal data. Off by default.</li>
-</ul>
-
-<p style="font-family: monospace; font-size: 15px; color: #5c4fa0; margin: 16px 0 8px;"><strong>v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</strong></p>
-
-<ul style="font-family: monospace; font-size: 16px; color: #2D2B3D; line-height: 1.8; padding-left: 20px;">
-<li><strong>Cross-Provider Routing</strong> — Route Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types.</li>
-<li><strong>Full Skill &amp; Research Audit</strong> — Multiplayer infrastructure, 3D game dev tooling, pen &amp; paper RPG systems. Per-stack community research.</li>
-<li><strong>Art Asset Pipeline</strong> — Free, browser-based sprite generation and animation. ComfyUI as a local alternative.</li>
-<li><strong>Obsidian Vault Export</strong> — One-click export into a linked Obsidian wiki.</li>
 </ul>
 
 <p style="font-family: monospace; font-size: 15px; color: #256262; margin: 16px 0 8px;"><strong>v0.5 — Ship &amp; Share</strong></p>

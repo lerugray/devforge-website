@@ -35,7 +35,7 @@
                 <p class="subtext">
                     Your GDD stays loaded. Claude reads it before every session, along with your stack, your tasks, and last session's notes.
                 </p>
-                <p class="price-line">v0.3.1 live &middot; $9 early access &middot; No subscription &middot; Windows + macOS</p>
+                <p class="price-line">v0.4.0 live &middot; $9 early access &middot; No subscription &middot; Windows + macOS</p>
                 <a href="https://conflict-simulations-llc.itch.io/devforge" class="btn-buy btn-buy--hero">Buy on Itch.io // $9</a>
             </section>
 
@@ -373,31 +373,26 @@
             <!-- Roadmap -->
             <section class="info-section" aria-labelledby="roadmap-heading">
                 <h2 id="roadmap-heading">What's next.</h2>
-                <h3 style="color: var(--green); margin-bottom: var(--space-12);">Just Shipped — v0.3.1</h3>
+                <h3 style="color: var(--green); margin-bottom: var(--space-12);">Just Shipped — v0.4.0</h3>
                 <ul class="detail-list">
-                    <li><strong>macOS support</strong> Apple Silicon Mac users can run DevForge now. The .dmg is on the downloads page alongside the Windows installer. Tested end-to-end before launch.</li>
-                    <li><strong>Cost Transparency Stack</strong> Pre-send dollar estimate next to the token count. Live running-cost chip in the activity feed during streaming. Burn-rate alert when output sustains past 100 tokens/sec for 3 seconds. Daily and weekly budget caps with soft confirm dialogs. STATS panel rolls it all up: Total Spent, Avg Cost / Prompt, Today's Spend, This Week's Spend, Top Spend by Project. Computed locally. No data leaves your machine.</li>
-                    <li><strong>LENS Mode (the 17th)</strong> Editorial review for your game's content. Flags cultural representation, mechanic parallels, content rating implications (ESRB / PEGI / CERO), regional sensitivity, and language audit. Severity tiers and 2-3 options per finding. PITCH stress-tests your design. LENS stress-tests your perception. Not a censor.</li>
-                    <li><strong>ASK Bot Pop-Out</strong> POP OUT button detaches the Ollama-powered helper into its own Tauri window. Live context flows from main → pop-out (claudeRunning, current task, mode, runtime, last activity entries, last 500 chars of streamed text). Stays visible across mode switches.</li>
-                    <li><strong>Native Notifications</strong> Windows Toast / NSUserNotification alerts when DevForge is minimized and a long Claude run finishes. Plugin-backed, not browser API.</li>
-                    <li><strong>Code Browser Languages</strong> Syntax highlighting expanded from 14 to 20 stacks. Added Swift (iOS), Kotlin (Android), Ruby (RPG Maker), asm6502 (NES), INI (Ikemen GO). PICO-8 (.p8) maps to Lua.</li>
-                    <li><strong>HABITS Dashboard</strong> Last-7-days self-insight cards in STATS: Top Mode, Avg Prompts / Session, Peak Spend Day, Active Days. Computed locally.</li>
-                    <li><strong>TEST Mode REPORT button</strong> Generates a structured markdown playtest report from the test log, auto-grouped by tag. COPY to clipboard or SAVE TO FILE writes <code>playtest-YYYY-MM-DD-HHmm.md</code> to the project root.</li>
+                    <li><strong>103 New Stack Skills</strong> Platform coverage now 20+ engines and targets: iOS/Android, Godot, Unity, Unreal, Ren'Py, LOVE, GameMaker, RPG Maker, GB Studio, NES/GB/GBA/Genesis, PICO-8, plus 10 classic source-port MOD targets (Doom, Quake 1-3, Diablo, Duke 3D and friends). Every skill web-verified against current docs before shipping.</li>
+                    <li><strong>Run Coordinator</strong> Sidebar shows live status of all active AUTO tabs, with crash recovery.</li>
+                    <li><strong>hands_off.yaml Awareness</strong> AUTO tabs warn before touching files a project marked hand-tuned.</li>
+                    <li><strong>Per-Provider Concurrency Caps</strong> Claude 4 / Gemini 3 / Ollama 2, global 9. Replaces the flat limit.</li>
+                    <li><strong>Per-Tab Provider Runtime</strong> AUTO-tab resume fixed end-to-end. MERGE action for parallel worktree tabs.</li>
+                    <li><strong>Security Hardening</strong> Closed an arbitrary-executable hole in session spawning with a hard provider allowlist. SSRF allowlist hardening with opt-in remote Ollama hosts.</li>
+                    <li><strong>Obsidian Vault Export</strong> Export your project's GDD, session notes, transcripts, research, and task lists from the project sidebar into a linked Obsidian wiki.</li>
+                    <li><strong>Smaller Downloads</strong> Thin-LTO + stripping. Smoke suite grew from 496 to 1085 checks, all green.</li>
+                    <li><strong>Docs Rewrite</strong> MANUAL and QUICKSTART rewritten to cover the autonomy arc.</li>
                 </ul>
                 <h3 style="color: var(--amber); margin-top: var(--space-24); margin-bottom: var(--space-12);">Coming Next</h3>
                 <ul class="detail-list">
                     <li><strong>Smarter Autonomous Tabs</strong> Ollama reads your task list and feeds tasks to Claude one at a time. Autonomous tabs become multi-step workflows instead of single prompts. Progress reports after each step.</li>
+                    <li><strong>Cross-Provider Routing</strong> Route different types of work to different providers. Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types. (Provider-expansion spec ratified; the routing layer is the next build.)</li>
+                    <li><strong>Pen &amp; Paper RPG Design</strong> Tabletop RPG design in analog mode. Dice system design, class building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.</li>
+                    <li><strong>Art Asset Pipeline</strong> Free, browser-based art generation. Base sprites, animated loops, sprite-sheet conversion, with ComfyUI as a local alternative.</li>
                     <li><strong>Stack-Aware Test Automation</strong> TEST mode generates real test suites using the right framework for your stack. Run from a button, see pass/fail in the activity feed. Failed tests auto-route to Debug with context. Config validation for Ikemen GO characters, mod structures, ROM headers. Works across all 20 platforms. (TEST mode REPORT shipped in v0.3.1; the suite-generation half is the un-shipped part.)</li>
                     <li><strong>Anonymous Usage Insights</strong> Opt-in, transparent, no personal data. You can view exactly what gets sent before opting in. Off by default.</li>
-                </ul>
-                <h3 style="color: var(--purple); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.4 — Content Depth, Cross-Provider Routing &amp; Visualization</h3>
-                <ul class="detail-list">
-                    <li><strong>Cross-Provider Routing</strong> Route different types of work to different providers. Claude for code, Gemini for research, Ollama for lightweight tasks. You configure which providers handle which task types.</li>
-                    <li><strong>Full Skill &amp; Research Audit</strong> Research sweep across all 20 stacks. Multiplayer infrastructure (traditional, MMO, async patterns). 3D game dev tooling (Blender, shaders, rigging, LOD, navmesh). Pen &amp; paper RPG systems and open SRDs. Per-stack community research. Curated open source tool catalog integrated into quick links.</li>
-                    <li><strong>MOD Mode Expansion</strong> Open source game modding: Doom, Quake, Diablo, Duke Nukem 3D. Strategy and simulation modding (Dominions 6, Conquest of Elysium, Aurora 4X, Dwarf Fortress). ROM hacking for SNES, GBA, and GB. Arcade ROM modding via MAME.</li>
-                    <li><strong>Pen &amp; Paper RPG Design</strong> Tabletop RPG design in analog mode. Dice system design, class building, encounter balance, bestiary generation. Pulls from open SRDs (d20, Fate, Powered by the Apocalypse). Generates fillable character sheets, GM screens, and random tables.</li>
-                    <li><strong>Art Asset Pipeline</strong> Free, browser-based art generation. Nano Banana generates base sprites, Grok animates them as video loops, SpriteMaster converts video to sprite sheets. ComfyUI as a local alternative.</li>
-                    <li><strong>Obsidian Vault Export</strong> One-click export of your GDD, session notes, transcripts, research, and task lists into a linked Obsidian wiki. Graph view turns your project history into a visual knowledge map.</li>
                 </ul>
                 <h3 style="color: var(--cyan); margin-top: var(--space-24); margin-bottom: var(--space-12);">v0.5 — Ship &amp; Share</h3>
                 <ul class="detail-list">
