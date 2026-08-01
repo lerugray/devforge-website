@@ -18,3 +18,4 @@ node_modules/
 
 # Per-user Claude Code permissions cache
 .claude/
+.bot-worktree/
