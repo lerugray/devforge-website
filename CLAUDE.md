@@ -39,6 +39,10 @@ Not a programmer. Comfortable following instructions and installing tools, but n
 
 **No real name AND no "Conflict Simulations LLC" on any public-facing content.** This is a hard rule. Use "DevForge" as the brand only.
 
+Scope (Ray, 2026-09-23, s149): two platform surfaces are exempt and are not violations: the macOS Developer ID
+signature (signs as the real name) and the owner profile of the lerugray GitHub account that hosts the open-source
+DevForge engine repo. Everything DevForge writes (site, itch, README prose, docs, package metadata, in-app copy) stays anonymous.
+
 ---
 
 ## Visual Design
